@@ -1,5 +1,6 @@
 @use 'reset';
 @use 'variables' as *;
+@use 'extends';
 
 @import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 //1440, 1024,768(max-width 384)// break point
@@ -7,6 +8,7 @@
 body{
     font-family: 'SpoqaHanSans-kr';
     font-size: 17px;
-    background-color: $test;
+    background-color: $bg;
+    color:$color1;
 }
 
