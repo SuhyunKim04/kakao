@@ -1,0 +1,15 @@
+.page_header{
+    position: fixed;
+    width: 100%;
+    left:0;top:0;
+
+    .inner{
+        // @extend %main;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1920px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
