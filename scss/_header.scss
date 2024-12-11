@@ -12,4 +12,12 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    .header_menu{
+        background-color: red;
+
+        .main_menu{
+            display: flex;
+        }
+    }
 }

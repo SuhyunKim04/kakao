@@ -120,6 +120,12 @@ input:focus {
   justify-content: space-between;
   align-items: center;
 }
+.page_header .header_menu {
+  background-color: red;
+}
+.page_header .header_menu .main_menu {
+  display: flex;
+}
 
 body {
   font-family: "SpoqaHanSans-kr";
