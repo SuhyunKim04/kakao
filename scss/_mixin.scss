@@ -1,0 +1,65 @@
+@use 'variables' as *;
+
+@mixin flex($j: space-between, $a:center, $d:null, $g:null){
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+    flex-direction: $d;
+    gap:$g; // 3px 5px -> row golumn;
+}
+
+@mixin grid($rg:null, $cg:null, $gtc:null, $gtr:null){
+    display: grid;
+    row-gap: $rg;
+    column-gap:$cg;
+    grid-template-columns: $gtc;
+    grid-template-rows: $gtr;
+}
+
+@mixin fixed($l:0, $t:0, $r:0, $b:0){
+    position: fixed;
+    left:$l;
+    right:$r;
+    top:$t;
+    bottom:$b;
+}
+
+@mixin posFull($p:absolute){
+    position: $p;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+}
+
+@mixin posCenter($way:y, $pos:absolute){
+    position: $p;
+    @if ($way == y){
+        top:50%;
+        transform: translateY(-50%);
+    }@else{
+        left:50%;
+        transform: translateX(-50%);
+    }
+}
+
+// @mixin iconBg($path, $size: 24, $start:null, $end:null, $type:svg){
+//     display: block;
+//     background: no-repeat center center/contain;
+//     $size: check($size);
+
+//     width: $size;
+//     height: $size;
+
+//     @debug $icon;
+
+//     @if ($start == null){
+//         background-image: url($icon + '#{$path}.#{$type}');
+//     }@else {
+//         @for $i from $start through $end {
+//             &:nth-child(#{$i}) {
+//                 background-image: url($icon + '#{$path}#{$i}.#{$type}');
+//             }
+//         }
+//     }
+// }

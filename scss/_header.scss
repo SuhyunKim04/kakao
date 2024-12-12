@@ -1,13 +1,16 @@
+@use 'mixin' as  *;
+@use 'extends' as *;
+
 .page_header{
     position: fixed;
     width: 100%;
     left:0;top:0;
 
     .inner{
-        // @extend %main;
-        width: 100%;
-        margin: 0 auto;
-        max-width: 1920px;
+        @extend %main;
+        // width: 100%;
+        // margin: 0 auto;
+        // max-width:1440px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -15,9 +18,26 @@
 
     .header_menu{
         background-color: red;
+        
 
         .main_menu{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           gap: 30px; // gap : 0 30px;
+
+        }
+
+        .sub_menu_group{
             display: flex;
+        }
+
+        .ad_container{
+            @include flex;
+        }
+
+        .has_third{
+            @include flex;
         }
     }
 }
