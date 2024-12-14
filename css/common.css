@@ -1,4 +1,5 @@
 @import url("//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
 body, div, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ol, ul, li, fieldset, button, select, textarea, figure, figcaption, input {
   margin: 0;
   padding: 0;
@@ -122,15 +123,17 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 90px;
 }
 .page_header .header_menu {
   background-color: red;
 }
 .page_header .header_menu .main_menu {
   display: flex;
+  font-size: 20px;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 }
 .page_header .header_menu .sub_menu_group {
   display: flex;
@@ -144,6 +147,15 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.page_header .header_menu .sub_menu {
+  display: none;
+}
+.page_header .header_icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 26px;
 }
 
 .icon_search {
@@ -160,11 +172,37 @@ input:focus {
   color: inherit !important;
 }
 
+.icon_korean {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/korean.svg");
+}
+
+.icon_moon {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/moon.svg");
+}
+
+.icon_narrow {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/narrow.svg");
+}
+
 body {
   font-family: "SpoqaHanSans-kr";
   font-size: 17px;
-  background-color: #000;
-  color: #fff;
+}
+
+h1 {
+  font-family: "Afacad Flux", sans-serif;
 }
 
 /*# sourceMappingURL=common.css.map */

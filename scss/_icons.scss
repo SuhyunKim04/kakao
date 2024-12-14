@@ -28,3 +28,14 @@ $menu:(
     @include fontIcon(map-get($menu, search)); 
 }
 
+.icon_korean{
+    @include iconBg('korean');
+}
+
+.icon_moon{
+    @include iconBg('moon');
+}
+
+.icon_narrow{
+    @include iconBg('narrow');
+}

@@ -8,23 +8,21 @@
 
     .inner{
         @extend %main;
-        // width: 100%;
-        // margin: 0 auto;
-        // max-width:1440px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 90px;
     }
 
     .header_menu{
         background-color: red;
         
-
         .main_menu{
            display: flex;
+           font-size: 20px;
            justify-content: space-between;
            align-items: center;
-           gap: 30px; // gap : 0 30px;
+           gap: 50px; // gap : 0 30px;
 
         }
 
@@ -39,5 +37,13 @@
         .has_third{
             @include flex;
         }
+
+        .sub_menu{
+            display: none;
+        }
+    }
+
+    .header_icons{
+        @include flex($g:26px);
     }
 }
