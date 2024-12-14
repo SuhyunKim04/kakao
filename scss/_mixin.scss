@@ -1,4 +1,6 @@
 @use 'variables' as *;
+@use 'extends' as *;
+
 
 @mixin flex($j: space-between, $a:center, $d:null, $g:null){
     display: flex;
@@ -62,4 +64,17 @@
             }
         }
     }
+}
+
+@mixin posFull($p:absolute) {
+    position:$p;
+    left:0;right:0;bottom:0;top:0;
+}
+
+
+@mixin dim($color:#000, $alpha:0.5, $p:fixed) {
+    @if $p != null {
+        @include posFull($p);
+    }
+    background-color:rgba($color, $alpha);
 }

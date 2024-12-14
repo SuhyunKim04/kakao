@@ -12,10 +12,11 @@
         justify-content: space-between;
         align-items: center;
         height: 90px;
+        position: relative;
+        z-index: 1000;
     }
 
     .header_menu{
-        background-color: red;
         
         .main_menu{
            display: flex;
@@ -24,6 +25,17 @@
            align-items: center;
            gap: 50px; // gap : 0 30px;
 
+        }
+
+        .main_btn{
+            border-radius: 28px;
+            padding: 10px 16px;
+
+            &.click{
+                background-color: #000;
+                color: #fff;
+                border: 1px solid #000;
+            }
         }
 
         .sub_menu_group{
@@ -39,7 +51,11 @@
         }
 
         .sub_menu{
-            display: none;
+            // display: none;
+            position: absolute;
+            top:90px;
+            background-color: aqua;
+            width: 20%;
         }
     }
 
