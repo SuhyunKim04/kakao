@@ -1,7 +1,7 @@
 @use 'variables' as *;
 @use 'mixin' as *;
 
-.dim{
+.dimm_bk{
     // @include dim;
     position: fixed;
     // background-color: rgba(#000, 0.5);
@@ -15,11 +15,11 @@
     }
 }
 
-.dim_white{
+.dimm_wt{
     @include fixed;
     background-color: rgba(yellow, 0.5);
     z-index: 999;
-    display: block;
+    display: none;
 
     &.open{
         display: block;
@@ -30,6 +30,11 @@
     background-color: #fff;
     @include fixed($b:300px);
     z-index: 1100;
+    display: none;
+
+    &.open{
+        display: block;
+    }
 }
 
 .icon_modal_close{

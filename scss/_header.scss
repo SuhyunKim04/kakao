@@ -5,6 +5,7 @@
     position: fixed;
     width: 100%;
     left:0;top:0;
+    z-index: 1000;
 
     
 
@@ -17,21 +18,35 @@
            align-items: center;
            gap: 50px; // gap : 0 30px;
 
-        }
+            & > li {
+                &.active {
+                   .sub_menu_group{
+                    display: block;
+                   }
 
-        .main_btn{
-            border-radius: 28px;
-            padding: 10px 16px;
-
-            &.click{
-                background-color: #000;
-                color: #fff;
-                border: 1px solid #000;
+                   .main_btn{
+                    background-color: #000;
+                    color: #fff;
+                    border: 1px solid #000;
+                   }
+                }
             }
         }
 
-        .sub_menu_group{
-            display: flex;
+        .main_btn, .main_btn_link{
+            border-radius: 28px;
+            padding: 10px 16px;
+            transition: background-color 0.4s;
+
+            &:hover{
+                background-color: #f3f3f3;
+            }
+        }
+
+        .main_btn_link{
+            img{
+                height: 12px;
+            }
         }
 
         .ad_container{
@@ -42,13 +57,12 @@
             @include flex;
         }
 
-        .sub_menu{
-            // display: none;
+        .sub_menu_group{
+           display: none;
             position: absolute;
             top:90px;
             background-color: aqua;
             width: 20%;
-            font-family: "Afacad Flux", sans-serif;
         }
     }
 
