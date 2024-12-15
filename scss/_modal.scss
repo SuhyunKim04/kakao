@@ -33,5 +33,15 @@
 }
 
 .icon_modal_close{
-    @include posFull($r:20px);
+    position: absolute;
+    right: 0px;
+    display: block;
+}
+
+.search_container{
+    @include flex($j:center);
+    .search_bar{
+        width: 600px;
+    }
+   
 }
