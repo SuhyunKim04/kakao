@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="page_header">
-        <div class="inner">
+        <div class="header_inner">
                 <h1><a href="/index.html">Choco</a></h1> 
             <nav class="header_menu">
                 <ul class="main_menu">
@@ -135,14 +135,14 @@
             </nav>
 
             <div class="header_icons">
-                <button type="button" class="header_btn icon_search">
+                <button type="button" class="icon_search">
                     <span class="blind">search</span>
                 </button>
-                <button type="button" class="hearder_btn icon_korean">
+                <button type="button" class="icon_korean">
                     <span class="blind">korean</span>
                 </button>
-                <button type="button" class="header_btn icon_moon">
-                    <span class="blind">moon</span>
+                <button type="button" class="theme-btn">
+                    <span class="blind">Dark Mode</span>
                 </button>
             </div>
         </div>
@@ -152,21 +152,19 @@
     <div class="dimm_bk"></div>
     <div class="dimm_wt"></div>
 
-    <section class="modal_search_container modal">
-        <div class="modal_search_header">
-            <div class="inner">
-                <h1><a href="/index.html">Choco</a></h1> 
-            </div>
-
-            <!-- <button type="button" class="header_btn icon_close icon_modal_close">
+    <section class="modal_search_container modal"> 
+        <div class="header_inner">
+            <a href="/index.html">Choco</a>
+            <button type="button" class="header_btn icon_close icon_modal_close">
                 <span class="blind">close</span>
-            </button> -->
+            </button>
+        </div>
 
+        
+        <div class="search_container">
             <form>
-                <div class="search_container">
-                    <input type="search" class="search_bar" name="search" placeholder="What are you looking for?">
-                </div>
-                    
+                <input type="search" class="search_bar" name="search" placeholder="What are you looking for?">
+                
             </form>
         </div>
     </section>

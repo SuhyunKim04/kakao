@@ -70,8 +70,8 @@
         @include flex($g:26px);
     }
 }
-
-.inner{
+ 
+.header_inner{
     @extend %main;
     display: flex;
     justify-content: space-between;

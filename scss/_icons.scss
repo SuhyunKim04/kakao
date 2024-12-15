@@ -36,8 +36,12 @@ $close:(
     @include iconBg('korean');
 }
 
-.icon_moon{
+.darkmode{
     @include iconBg('moon');
+}
+
+.lightmode{
+    @include iconBg('sun');
 }
 
 .icon_narrow{

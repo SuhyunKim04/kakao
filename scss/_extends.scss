@@ -1,6 +1,26 @@
+@use 'variables' as *;
 %main {
     width: 100%;
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: map-get($breakPoint , pc);
 }
 
+@media screen and (max-width:1440px) {
+   %main{
+    max-width:map-get($breakPoint, tablet );
+   }
+}
+
+@media screen and (max-width:980px) {
+    %main{
+     max-width:map-get($breakPoint, tabletV );
+    }
+ }
+
+ @media screen and (max-width:768px) {
+    %main{
+     max-width:map-get($breakPoint, mobile );
+    }
+ }
+ 
+ 

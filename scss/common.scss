@@ -15,6 +15,11 @@
 body{
     font-family: "Afacad Flux", sans-serif;
     font-size: 17px;
+
+    &.theme-dark {
+        background-color:#1b1b1b;
+        color:#fff;
+    }
    
 }
 
