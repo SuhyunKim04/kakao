@@ -7,6 +7,10 @@ $menu:(
     sun:'\f185'
 );
 
+$close:(
+    close: '\f00d'
+);
+
 
 
 @mixin fontIcon($code:null, $style:null, $family:'Free', $size:24, $weight:900){
@@ -38,4 +42,8 @@ $menu:(
 
 .icon_narrow{
     @include iconBg('narrow');
+}
+
+.icon_close{
+    @include fontIcon(map-get($close,close));
 }

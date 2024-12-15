@@ -6,15 +6,7 @@
     width: 100%;
     left:0;top:0;
 
-    .inner{
-        @extend %main;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 90px;
-        position: relative;
-        z-index: 1000;
-    }
+    
 
     .header_menu{
         
@@ -56,10 +48,21 @@
             top:90px;
             background-color: aqua;
             width: 20%;
+            font-family: "Afacad Flux", sans-serif;
         }
     }
 
     .header_icons{
         @include flex($g:26px);
     }
+}
+
+.inner{
+    @extend %main;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    position: relative;
+    z-index: 1000;
 }

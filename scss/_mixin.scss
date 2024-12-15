@@ -26,12 +26,12 @@
     bottom:$b;
 }
 
-@mixin posFull($p:absolute){
+@mixin posFull($p:absolute, $l:0,$r:0, $b:0, $t:0){
     position: $p;
-    left:0;
-    right:0;
-    bottom:0;
-    top:0;
+    left:$l;
+    right:$r;
+    bottom:$b;
+    top:$t;
 }
 
 @mixin posCenter($way:y, $pos:absolute){
@@ -66,10 +66,10 @@
     }
 }
 
-@mixin posFull($p:absolute) {
-    position:$p;
-    left:0;right:0;bottom:0;top:0;
-}
+// @mixin posFull($p:absolute) {
+//     position:$p;
+//     left:0;right:0;bottom:0;top:0;
+// }
 
 
 @mixin dim($color:#000, $alpha:0.5, $p:fixed) {

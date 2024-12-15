@@ -1,5 +1,5 @@
 @use 'variables' as *;
-
+@use 'mixin' as *;
 
 .dim{
     // @include dim;
@@ -9,9 +9,29 @@
     background-color: rgba(#000, 0.5);
     z-index: 999;
     display: none;
-    color:blue;
 
     &.open{
         display: block;
     }
+}
+
+.dim_white{
+    @include fixed;
+    background-color: rgba(yellow, 0.5);
+    z-index: 999;
+    display: block;
+
+    &.open{
+        display: block;
+    }
+}
+
+.modal_search_container{
+    background-color: #fff;
+    @include fixed($b:300px);
+    z-index: 1100;
+}
+
+.icon_modal_close{
+    @include posFull($r:20px);
 }

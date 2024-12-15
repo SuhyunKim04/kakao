@@ -107,7 +107,7 @@ input:focus {
   outline: 1px solid #252525;
 }
 
-.page_header .inner {
+.inner {
   width: 100%;
   margin: 0 auto;
   max-width: 1440px;
@@ -118,14 +118,6 @@ input:focus {
   width: 100%;
   left: 0;
   top: 0;
-}
-.page_header .inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 90px;
-  position: relative;
-  z-index: 1000;
 }
 .page_header .header_menu .main_menu {
   display: flex;
@@ -161,12 +153,22 @@ input:focus {
   top: 90px;
   background-color: aqua;
   width: 20%;
+  font-family: "Afacad Flux", sans-serif;
 }
 .page_header .header_icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 26px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  position: relative;
+  z-index: 1000;
 }
 
 .icon_search {
@@ -207,6 +209,20 @@ input:focus {
   background-image: url("../images/icons/narrow.svg");
 }
 
+.icon_close {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.icon_close::before {
+  content: "\f00d";
+  font-family: "Font Awesome 6 Free";
+  font-size: 24px;
+  font-weight: 900;
+  color: inherit !important;
+}
+
 .dim {
   position: fixed;
   left: 0;
@@ -216,10 +232,41 @@ input:focus {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   display: none;
-  color: blue;
 }
 .dim.open {
   display: block;
+}
+
+.dim_white {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 0, 0.5);
+  z-index: 999;
+  display: block;
+}
+.dim_white.open {
+  display: block;
+}
+
+.modal_search_container {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 300px;
+  z-index: 1100;
+}
+
+.icon_modal_close {
+  position: absolute;
+  left: 0;
+  right: 20px;
+  bottom: 0;
+  top: 0;
 }
 
 body {
