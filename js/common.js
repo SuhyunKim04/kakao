@@ -30,5 +30,14 @@ const header_main_btn = () => {
     focusOut();
 }
 
+const search_modal = () => {
+    const search = document.querySelector('.icon_search');
+
+    search_modal.addEventListener('click', (e) => {
+        
+    })
+}
+
 
 header_main_btn();
+search_modal();
