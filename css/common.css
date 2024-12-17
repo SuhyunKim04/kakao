@@ -134,12 +134,18 @@ input:focus {
   top: 0;
   z-index: 1000;
 }
+.page_header .header_menu {
+  position: relative;
+}
 .page_header .header_menu .main_menu {
   display: flex;
   font-size: 20px;
   justify-content: space-between;
   align-items: center;
   gap: 50px;
+}
+.page_header .header_menu .main_menu > li {
+  gap: 20px;
 }
 .page_header .header_menu .main_menu > li.active .sub_menu_group {
   display: block;
@@ -169,13 +175,14 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 .page_header .header_menu .sub_menu_group {
   display: none;
   position: absolute;
-  top: 90px;
   background-color: #fff;
-  width: 20%;
+  border-radius: 20px;
+  padding: 50px 30px 0;
 }
 .page_header .header_icons {
   display: flex;
