@@ -174,6 +174,7 @@ input:focus {
 }
 .page_header .header_menu .ad_container .sub_slide {
   width: 270px;
+  padding-left: 50px;
 }
 .page_header .header_menu .has_third {
   display: flex;
@@ -186,7 +187,7 @@ input:focus {
   position: absolute;
   background-color: #fff;
   border-radius: 20px;
-  padding: 50px 100px 20px 30px;
+  width: 100%;
 }
 .page_header .header_menu .sub_menu_group .sub_menu li {
   padding-top: 18px;
@@ -230,7 +231,7 @@ input:focus {
   background-image: url("../images/icons/korean.svg");
 }
 
-.darkmode {
+.theme_btn {
   display: block;
   background: no-repeat center center/contain;
   width: 24px;
@@ -288,7 +289,7 @@ input:focus {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 0, 0.5);
   z-index: 999;
   display: none;
 }

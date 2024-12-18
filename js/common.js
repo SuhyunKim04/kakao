@@ -30,14 +30,17 @@ const header_main_btn = () => {
     focusOut();
 }
 
-const search_modal = () => {
-    const search = document.querySelector('.icon_search');
-
-    search_modal.addEventListener('click', (e) => {
-        
+const theme = () => {
+    const theme_btn = document.querySelector('.theme_btn');
+    const dimm_wt = document.querySelector('.dimm_wt');
+    theme_btn.addEventListener('click', () => {
+        dimm_wt.classList.add('open');
+        console.log('hell');
     })
 }
 
 
+
+
 header_main_btn();
-search_modal();
+theme();

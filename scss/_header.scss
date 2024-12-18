@@ -56,6 +56,7 @@
 
             .sub_slide{
                 width: 270px;
+                padding-left: 50px;
             }
         }
 
@@ -71,7 +72,8 @@
             background-color: #fff;
             // width: 20%;
             border-radius: 20px;
-            padding: 50px 100px 20px 30px;
+            // padding: 50px 100px 20px 30px;
+            width: 100%;
 
             .sub_menu{
                 li{
