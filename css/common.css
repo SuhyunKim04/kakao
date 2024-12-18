@@ -148,7 +148,7 @@ input:focus {
   gap: 20px;
 }
 .page_header .header_menu .main_menu > li.active .sub_menu_group {
-  display: block;
+  display: flex;
 }
 .page_header .header_menu .main_menu > li.active .main_btn {
   background-color: #000;
@@ -169,7 +169,11 @@ input:focus {
 .page_header .header_menu .ad_container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.page_header .header_menu .ad_container .sub_slide {
+  width: 270px;
 }
 .page_header .header_menu .has_third {
   display: flex;
@@ -182,7 +186,11 @@ input:focus {
   position: absolute;
   background-color: #fff;
   border-radius: 20px;
-  padding: 50px 30px 0;
+  padding: 50px 100px 20px 30px;
+}
+.page_header .header_menu .sub_menu_group .sub_menu li {
+  padding-top: 18px;
+  font-size: 22px;
 }
 .page_header .header_icons {
   display: flex;
