@@ -35,7 +35,7 @@ const theme = () => {
     const dimm_wt = document.querySelector('.dimm_wt');
     theme_btn.addEventListener('click', () => {
         dimm_wt.classList.add('open');
-        console.log('hell');
+        
     })
 }
 

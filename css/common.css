@@ -168,7 +168,7 @@ input:focus {
 }
 .page_header .header_menu .ad_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
 }

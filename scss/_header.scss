@@ -51,7 +51,7 @@
         }
 
         .ad_container{
-            @include flex($a:flex-start);
+            @include flex($a:flex-start,$j: flex-start);
             width: 100%;
 
             .sub_slide{
