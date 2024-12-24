@@ -41,6 +41,38 @@ const theme = () => {
 
 
 
+const dimm_wt_open = () => {
+    const dimm_wt = document.querySelector('.dimm_wt');
+    dimm_wt.classList.add('open')
+}
+
+const dimm_wt_close = () => {
+    const dimm_wt = document.querySelector('.dimm_wt');
+    dimm_wt.classList.remove('open');
+}
+
+const search = () => {
+    const search_icon = document.querySelector('.icon_search');
+    const close_modal = document.querySelector('.icon_close');
+    const search_modal_container = document.querySelector('.modal_search_container');
+    search_icon.addEventListener('click', () => {
+        dimm_wt_open();
+        search_modal_container.classList.add('open');
+    })
+
+    close_modal.addEventListener('click', () => {
+        dimm_wt_close();
+        search_modal_container.classList.remove('open');
+    })
+
+   
+   
+}
+
+
+
+
 
 header_main_btn();
 theme();
+search();

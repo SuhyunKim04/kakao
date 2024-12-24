@@ -303,7 +303,7 @@ input:focus {
   left: 0;
   right: 0;
   top: 0;
-  bottom: 300px;
+  bottom: 200px;
   z-index: 1100;
   display: none;
 }
@@ -321,11 +321,14 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 120px 0;
 }
 .search_container .search_bar {
-  width: 600px;
-  height: 60px;
+  width: 1000px;
+  height: 80px;
   padding: 20px 20px 20px 60px;
+  background: #2f2f2f;
+  border-radius: 20px;
 }
 
 body {

@@ -28,7 +28,7 @@
 
 .modal_search_container{
     background-color: #fff;
-    @include fixed($b:300px);
+    @include fixed($b:200px);
     z-index: 1100;
     display: none;
 
@@ -45,10 +45,14 @@
 
 .search_container{
     @include flex($j:center);
+    padding: 120px 0;
+
     .search_bar{
-        width: 600px;
-        height: 60px;
+        width: 1000px;
+        height: 80px;
         padding: 20px 20px 20px 60px;
+        background: #2f2f2f;
+        border-radius: 20px;
     }
    
 }
