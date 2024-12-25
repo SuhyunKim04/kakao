@@ -28,8 +28,12 @@ $close:(
     }
 }
  
+// .icon_search{
+//     @include fontIcon(map-get($menu, search)); 
+// }
+
 .icon_search{
-    @include fontIcon(map-get($menu, search)); 
+    @include iconBg('search');
 }
 
 .icon_korean{

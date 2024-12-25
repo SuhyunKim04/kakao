@@ -76,3 +76,7 @@ const search = () => {
 header_main_btn();
 theme();
 search();
+
+
+console.log('hello')
+console.error('this is error')

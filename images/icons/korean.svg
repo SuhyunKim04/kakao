@@ -1,5 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <circle cx="12" cy="12.22" r="9.79" style="fill: none; stroke: #131313; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3px;"/>
-  <path d="M2.9,12.22s4.71,6.65,9.1,0c4.39-6.65,9.1,0,9.1,0" style="fill: none; stroke: #131313; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3px;"/>
-</svg>
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24" stroke="#000"><g data-v-400e4f9a="" fill="none" fill-rule="evenodd"><g data-v-400e4f9a="" stroke-width="1.5"><path data-v-400e4f9a="" d="M19.353 9.914c0 5.213-4.226 9.438-9.438 9.438-5.213 0-9.438-4.225-9.438-9.438C.477 4.702 4.702.477 9.915.477c5.212 0 9.438 4.225 9.438 9.437z" transform="translate(-1375 -169) translate(79.5 145) translate(1248 24) translate(50 2)"></path> <path data-v-400e4f9a="" d="M19.205 11.52c-.451-2.769-2.357-4.129-4.643-4.227-2.434-.023-3.491 1.71-4.267 2.615l-.594.69c-1.361 1.238-2.384 1.633-3.876 1.588C2.897 12.153.888 9.456.888 7.224" transform="translate(-1375 -169) translate(79.5 145) translate(1248 24) translate(50 2)"></path></g></g></svg>

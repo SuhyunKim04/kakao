@@ -1,25 +1,32 @@
 @use 'variables' as *;
+@use 'mixin' as *;
 %main {
     width: 100%;
     margin: 0 auto;
-    max-width: map-get($breakPoint , pc);
+    max-width: map-get($breakpoints , pc);
 }
 
-@media screen and (max-width:1440px) {
+
+ 
+ 
+
+ 
+@include media(pc) {
    %main{
-    max-width:map-get($breakPoint, tablet );
-   }
+      max-width:map-get($breakpoints, tablet );
+     } 
 }
+ 
 
-@media screen and (max-width:980px) {
+@media screen and (max-width:map-get($breakpoints, tablet)) {
     %main{
-     max-width:map-get($breakPoint, tabletV );
+     max-width:map-get($breakpoints, tabletV );
     }
  }
 
- @media screen and (max-width:768px) {
+ @media screen and (max-width:map-get($breakpoints, tableV)) {
     %main{
-     max-width:map-get($breakPoint, mobile );
+     max-width:map-get($breakpoints, mobile );
     }
  }
  

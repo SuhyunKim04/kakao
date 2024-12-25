@@ -28,12 +28,15 @@
 
 .modal_search_container{
     background-color: #fff;
-    @include fixed($b:200px);
+    @include fixed($b:auto);
     z-index: 1100;
     display: none;
-
     &.open{
         display: block;
+    }
+
+    .logo{
+        font-size: 32px;
     }
 }
 
@@ -44,15 +47,51 @@
 }
 
 .search_container{
-    @include flex($j:center);
+    @include flex($j:center,$g:30px);
     padding: 120px 0;
+    flex-direction: column;
+
+    .input_wrap{
+        position: relative;
+        &::before{
+            content: ""; 
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: 25px; bottom: -32px; 
+            border: 20px solid #2f2f2f; 
+            border-color:#2f2f2f transparent transparent;
+            
+        }
+    }
 
     .search_bar{
-        width: 1000px;
+        width: 800px;
         height: 80px;
         padding: 20px 20px 20px 60px;
         background: #2f2f2f;
         border-radius: 20px;
+        color: #fff;
+        font-weight: 600;
+
+        &::placeholder{
+            color: inherit;
+        }
+    }
+
+    .hash_tags {
+        max-width: 440px;
+        width: 100%;
+        display:inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:8px;
+        a{
+            border-radius: 28px;
+            padding: 10px 16px;
+            background-color: #f3f3f3;
+            display: inline-block;
+        }
     }
    
 }

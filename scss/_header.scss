@@ -20,6 +20,8 @@
 
             & > li {
                 gap:20px;
+                position: relative;
+                
                 &.active {
                    .sub_menu_group{
                     display: flex;
@@ -32,6 +34,8 @@
                    }
                 }
             }
+
+            
         }
 
         .main_btn, .main_btn_link{
@@ -52,7 +56,6 @@
 
         .ad_container{
             @include flex($a:flex-start,$j: flex-start);
-            width: 100%;
 
             .sub_slide{
                 width: 270px;
@@ -68,17 +71,23 @@
         .sub_menu_group{
             display: none;
             position: absolute;
+            top:64px;left:50%;
+            transform: translateX(-50%);
             // top:90px;
             background-color: #fff;
             // width: 20%;
-            border-radius: 20px;
+            border-radius: 0 0 20px 20px;
             // padding: 50px 100px 20px 30px;
-            width: 100%;
 
             .sub_menu{
                 li{
                     padding-top: 18px; 
-                    font-size: 22px;
+                    font-size: 17px;
+
+                    strong{
+                        font-weight: 400;
+                        font-size: 15px;
+                    }
                 }
             }
         }
@@ -97,4 +106,14 @@
     height: 90px;
     position: relative;
     z-index: 1000;
+}
+
+@include media(pc) {
+    .page_header{
+        .header_menu{
+            .main_menu{
+                font-size: 16px;
+            }
+        }
+    }
 }

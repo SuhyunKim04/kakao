@@ -23,3 +23,28 @@ body{
    
 }
 
+.tablet, .tabletV .mobile {
+    display:none;
+}
+
+@include media(tablet) {
+    .pc {
+        display:none;
+    }
+
+    .tablet {
+        display:block;
+    }
+}
+
+@include media(tabletV) {
+    .tabletV {
+        display:block;
+    }
+}
+
+@include media(mobile) {
+    .mobile {
+        display:block;
+    }
+}

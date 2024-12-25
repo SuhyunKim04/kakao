@@ -1,5 +1,5 @@
 @use 'variables' as *;
-@use 'extends' as *;
+// @use 'extends' as *;
 
 
 @mixin flex($j: space-between, $a:center, $d:null, $g:null){
@@ -78,3 +78,26 @@
     }
     background-color:rgba($color, $alpha);
 }
+
+@mixin media-base($breakpoint) {
+    @media screen and (max-width:$breakpoint) {
+         @content;
+     }
+}
+
+
+@mixin media($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media all and (max-width:map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @error 'Can not find breakpoint'
+    }
+ }
+
+
+ /*
+ console.log('') --> @debug
+ console.error('') --> @error
+ */
