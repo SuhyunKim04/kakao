@@ -30,14 +30,14 @@ const header_main_btn = () => {
     focusOut();
 }
 
-const theme = () => {
-    const theme_btn = document.querySelector('.theme_btn');
-    const dimm_wt = document.querySelector('.dimm_wt');
-    theme_btn.addEventListener('click', () => {
-        dimm_wt.classList.add('open');
+// const theme = () => {
+//     const theme_btn = document.querySelector('.theme_btn');
+//     const dimm_wt = document.querySelector('.dimm_wt');
+//     theme_btn.addEventListener('click', () => {
+//         dimm_wt.classList.add('open');
         
-    })
-}
+//     })
+// }
 
 
 
@@ -68,9 +68,6 @@ const search = () => {
    
    
 }
-
-
-
 
 
 header_main_btn();

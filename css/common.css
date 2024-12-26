@@ -298,7 +298,7 @@ console.error('') --> @error
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 0, 0.5);
+  background-color: rgba(176, 176, 215, 0.3);
   z-index: 999;
   display: none;
 }
