@@ -64,7 +64,7 @@
         }
 
         .has_third{
-            @include flex;
+            @include flex($a:flex-start);
             gap: 20px;
         }
 
@@ -78,6 +78,8 @@
             // width: 20%;
             border-radius: 0 0 20px 20px;
             // padding: 50px 100px 20px 30px;
+            padding: 20px 40px;
+            white-space: nowrap;
 
             .sub_menu{
                 li{

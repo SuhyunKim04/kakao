@@ -183,7 +183,7 @@ console.error('') --> @error
 .page_header .header_menu .has_third {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 .page_header .header_menu .sub_menu_group {
@@ -194,6 +194,8 @@ console.error('') --> @error
   transform: translateX(-50%);
   background-color: #fff;
   border-radius: 0 0 20px 20px;
+  padding: 20px 40px;
+  white-space: nowrap;
 }
 .page_header .header_menu .sub_menu_group .sub_menu li {
   padding-top: 18px;
