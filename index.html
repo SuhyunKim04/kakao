@@ -14,8 +14,10 @@
             <div class="nav_wrap"> 
                 <div class="nav_dim"></div>
                 <nav class="header_menu">
-                    <button class="tablet">close</button>
-
+                    <button type="button" id="close_menu">
+                        <span class="blind">menuclose</span>
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                     <ul class="main_menu">
                         <li class="left">
                             <button type="button" class="main_btn">About</button>
@@ -142,10 +144,9 @@
                             </a>
                         </li>
                     </ul>
-                    
                     <ul class="tablet">
-                        <li>menu1</li>
-                        <li>menu2</li>
+                        <li>Custom</li>
+                        <li>Custom</li>
                     </ul>
                 </nav>
             </div>
@@ -154,11 +155,14 @@
                 <button type="button" class="icon_search">
                     <span class="blind">search</span>
                 </button>
-                <button type="button" class="icon_korean"> 
+                <button type="button" class="icon_korean pc"> 
                     <span class="blind">korean</span>
                 </button>
                 <button type="button" class="theme_btn pc">
                     <span class="blind">Dark Mode</span>
+                </button>
+                <button type="button" class="icon_ham tablet">
+                    <span class="blind">Ham_menu</span>
                 </button>
             </div>
         </div>

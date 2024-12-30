@@ -1,6 +1,6 @@
 @use 'mixin' as  *;
 @use 'extends' as *;
-
+@use 'icons' as *;
 .page_header{
     position: fixed;
     width: 100%;
@@ -110,18 +110,77 @@
     z-index: 1000;
 }
 
-@include media(pc) {
+@include media(tablet) {
+    .nav_dim{
+        position:fixed;
+        inset: 0 0 0 0;
+        background-color: rgba(#000,0.7);
+        display: none;
+    }
+
+    .dimm_bk.open {
+        display:none !important;
+    }
     .page_header{
-        .header_menu{
-            .main_menu{
-                font-size: 16px;
+        .nav_wrap.open {
+            .nav_dim {
+                display:block;
+            }
+
+            .header_menu {
+                right:0;
             }
         }
+        .header_menu{
+            position: fixed;
+            inset: 0 -410px 0 auto;
+            transition: 0.4s;
+            background: #fff;
+            width: 400px;
+            overflow-y: auto; 
+            overflow-x:hidden;
+            padding: 48px 39px 48px 35px;
+           
+
+
+
+            .main_menu{
+                display: block;
+
+                & > li.active {
+                    .sub_menu_group {
+                        display:block;
+                    }
+
+                    .main_btn:after {
+                        content:'\f077';
+                    }
+                }
+            }
+            
+            .has_third {
+                display:block;
+            }
+            
+            .sub_menu_group{ 
+                position: static;
+                transform: translateX(0);
+                border-radius: 20px 20px;
+                background-color: #f7f7f7;
+            }
+        
+        }
+    }
+
+    .main_btn{
+       width:100%;
+       @include fontIcon('\f078', $way:after, $j:space-between,$size:18px);
+    }
+
+    #close_menu{
+        display: block;
+        margin: 0 0 0 auto;
     }
 }
 
-@include media(tablet) {
-    .pc{
-        display: none;
-    }
-}
+

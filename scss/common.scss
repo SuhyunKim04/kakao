@@ -12,6 +12,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
 //1440, 1024,768(max-width 384)// break point
 
+html, body {
+    width:100%;
+    overflow-x:hidden;
+}
 body{
     font-family: "Afacad Flux", sans-serif;
     font-size: 17px;
@@ -27,13 +31,25 @@ body{
     display:none;
 }
 
-@include media(tablet) {
-    .pc {
-        display:none;
+@include media(pc) {
+    .page_header{
+        .header_menu{
+            .main_menu{
+                font-size: 16px;
+            }
+        }
     }
 
-    .tablet {
-        display:block;
+    
+}
+
+@include media(tablet) {
+    .pc{
+        display: none;
+    }
+
+    .tablet{
+        display: block;
     }
 }
 

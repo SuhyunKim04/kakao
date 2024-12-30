@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
-body, div, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ol, ul, li, fieldset, button, select, textarea, figure, figcaption, input {
+body, div, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ol, ul, li, fieldset, button, select, textarea, figure, figcaption, input, header, footer, nav, section, article, aside {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -131,6 +131,68 @@ console.error('') --> @error
     max-width: 384px;
   }
 }
+.icon_search {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/search.svg");
+}
+
+.icon_korean {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/korean.svg");
+}
+
+.icon_ham {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/ham.svg");
+}
+
+.theme_btn {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/moon.svg");
+}
+
+.lightmode {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/sun.svg");
+}
+
+.icon_narrow {
+  display: block;
+  background: no-repeat center center/contain;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/narrow.svg");
+}
+
+.icon_close {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.icon_close::before {
+  content: "\f00d";
+  font-family: "Font Awesome 6 Free";
+  font-size: 24px;
+  font-weight: 900;
+  color: inherit !important;
+}
+
 .page_header {
   position: fixed;
   width: 100%;
@@ -221,70 +283,69 @@ console.error('') --> @error
   z-index: 1000;
 }
 
-@media all and (max-width: 1440px) {
-  .page_header .header_menu .main_menu {
-    font-size: 16px;
-  }
-}
 @media all and (max-width: 1024px) {
-  .pc {
+  .nav_dim {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.7);
     display: none;
   }
+  .dimm_bk.open {
+    display: none !important;
+  }
+  .page_header .nav_wrap.open .nav_dim {
+    display: block;
+  }
+  .page_header .nav_wrap.open .header_menu {
+    right: 0;
+  }
+  .page_header .header_menu {
+    position: fixed;
+    inset: 0 -410px 0 auto;
+    transition: 0.4s;
+    background: #fff;
+    width: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 48px 39px 48px 35px;
+  }
+  .page_header .header_menu .main_menu {
+    display: block;
+  }
+  .page_header .header_menu .main_menu > li.active .sub_menu_group {
+    display: block;
+  }
+  .page_header .header_menu .main_menu > li.active .main_btn:after {
+    content: "\f077";
+  }
+  .page_header .header_menu .has_third {
+    display: block;
+  }
+  .page_header .header_menu .sub_menu_group {
+    position: static;
+    transform: translateX(0);
+    border-radius: 20px 20px;
+    background-color: #f7f7f7;
+  }
+  .main_btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: space-between;
+  }
+  .main_btn::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-size: 18px;
+    font-weight: 900;
+    color: inherit !important;
+  }
+  #close_menu {
+    display: block;
+    margin: 0 0 0 auto;
+  }
 }
-.icon_search {
-  display: block;
-  background: no-repeat center center/contain;
-  width: 24px;
-  height: 24px;
-  background-image: url("../images/icons/search.svg");
-}
-
-.icon_korean {
-  display: block;
-  background: no-repeat center center/contain;
-  width: 24px;
-  height: 24px;
-  background-image: url("../images/icons/korean.svg");
-}
-
-.theme_btn {
-  display: block;
-  background: no-repeat center center/contain;
-  width: 24px;
-  height: 24px;
-  background-image: url("../images/icons/moon.svg");
-}
-
-.lightmode {
-  display: block;
-  background: no-repeat center center/contain;
-  width: 24px;
-  height: 24px;
-  background-image: url("../images/icons/sun.svg");
-}
-
-.icon_narrow {
-  display: block;
-  background: no-repeat center center/contain;
-  width: 24px;
-  height: 24px;
-  background-image: url("../images/icons/narrow.svg");
-}
-
-.icon_close {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-  justify-content: center;
-}
-.icon_close::before {
-  content: "\f00d";
-  font-family: "Font Awesome 6 Free";
-  font-size: 24px;
-  font-weight: 900;
-  color: inherit !important;
-}
-
 .dimm_bk {
   position: fixed;
   left: 0;
@@ -384,6 +445,11 @@ console.error('') --> @error
   display: inline-block;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Afacad Flux", sans-serif;
   font-size: 17px;
@@ -397,6 +463,11 @@ body.theme-dark {
   display: none;
 }
 
+@media all and (max-width: 1440px) {
+  .page_header .header_menu .main_menu {
+    font-size: 16px;
+  }
+}
 @media all and (max-width: 1024px) {
   .pc {
     display: none;

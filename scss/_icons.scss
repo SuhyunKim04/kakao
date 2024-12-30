@@ -13,19 +13,19 @@ $close:(
 
 
 
-@mixin fontIcon($code:null, $style:null, $family:'Free', $size:24, $weight:900){
+@mixin fontIcon($code:null, $style:null, $family:'Free', $size:24px, $weight:900, $way:before, $j:center){
     display: flex;
     align-items: center;
     column-gap: 10px;
-    justify-content: center;
+    justify-content:$j; 
 
-    &::before {
+    &::#{$way} {
         content: $code;
         font-family: "Font Awesome 6 #{$family}";
-        font-size: 24px;
+        font-size: $size;
         font-weight:$weight;
         color: inherit !important;
-    }
+    } 
 }
  
 // .icon_search{
@@ -38,6 +38,10 @@ $close:(
 
 .icon_korean{
     @include iconBg('korean');
+}
+
+.icon_ham{
+    @include iconBg('ham');
 }
 
 .theme_btn{

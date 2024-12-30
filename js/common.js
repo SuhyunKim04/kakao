@@ -64,15 +64,26 @@ const search = () => {
         dimm_wt_close();
         search_modal_container.classList.remove('open');
     })
-
-   
    
 }
 
+const open_tablet =() => {
+    const ham_icon = document.querySelector('.icon_ham');
+    const tablet_menu = document.querySelector('.nav_wrap');
+    const close_menu = document.getElementById('close_menu');
+    ham_icon.addEventListener('click',() => {
+        tablet_menu.classList.add('open')
+    })
+
+    close_menu.addEventListener('click' , () => {
+        tablet_menu.classList.remove('open');
+    })
+}
 
 header_main_btn();
 // theme();
 search();
+open_tablet();
 
 
 console.log('hello')
