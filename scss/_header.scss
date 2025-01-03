@@ -60,6 +60,25 @@
             .sub_slide{
                 width: 270px;
                 padding-left: 50px;
+
+               
+            }
+
+            .news_box{
+                .news_box_title{
+                    @include flex($j:flex-start);
+                    img{
+                        width: 24px;
+                    }
+                    strong{
+                        display: inline-block;
+                    }
+                }
+                
+                p{
+                    overflow: hidden;
+                }
+                
             }
         }
 
@@ -89,6 +108,7 @@
                     strong{
                         font-weight: 400;
                         font-size: 15px;
+                        color: #666;
                     }
                 }
             }
@@ -184,10 +204,6 @@
             }
         
         }
-    }
-
-    .main_btn{
-      
     }
 
     #close_menu{

@@ -242,6 +242,20 @@ console.error('') --> @error
   width: 270px;
   padding-left: 50px;
 }
+.page_header .header_menu .ad_container .news_box .news_box_title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.page_header .header_menu .ad_container .news_box .news_box_title img {
+  width: 24px;
+}
+.page_header .header_menu .ad_container .news_box .news_box_title strong {
+  display: inline-block;
+}
+.page_header .header_menu .ad_container .news_box p {
+  overflow: hidden;
+}
 .page_header .header_menu .has_third {
   display: flex;
   justify-content: space-between;
@@ -266,6 +280,7 @@ console.error('') --> @error
 .page_header .header_menu .sub_menu_group .sub_menu li strong {
   font-weight: 400;
   font-size: 15px;
+  color: #666;
 }
 .page_header .header_icons {
   display: flex;
