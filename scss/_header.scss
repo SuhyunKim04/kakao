@@ -110,6 +110,11 @@
     z-index: 1000;
 }
 
+#close_menu{
+    display: none;
+    margin: 0 0 0 auto;
+}
+
 @include media(tablet) {
     .nav_dim{
         position:fixed;
@@ -142,7 +147,14 @@
             padding: 48px 39px 48px 35px;
            
 
-
+        .main_btn{
+            width:100%;
+            @include fontIcon('\f078', $way:after, $j:space-between,$size:18px);
+            font-weight: 600;
+            color: #000;
+            background-color: transparent;
+            border: none;
+        }
 
             .main_menu{
                 display: block;
@@ -151,6 +163,8 @@
                     .sub_menu_group {
                         display:block;
                     }
+
+                    
 
                     .main_btn:after {
                         content:'\f077';
@@ -173,14 +187,18 @@
     }
 
     .main_btn{
-       width:100%;
-       @include fontIcon('\f078', $way:after, $j:space-between,$size:18px);
+      
     }
 
     #close_menu{
         display: block;
         margin: 0 0 0 auto;
+        padding: 0 0 30px 0;
     }
+}
+
+#tablet_menu{
+    @include flex($d:column,$a:stretch,$g:30px);
 }
 
 

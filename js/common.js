@@ -6,7 +6,7 @@ const header_main_btn = () => {
         menu.addEventListener('click', () =>{
             
             menuReset();
-            menu.parentNode.classList.add('active')
+            menu.parentNode.classList.toggle('active')
 
             console.log(menu.parentNode)
             console.log(menu.parentElement)
