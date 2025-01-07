@@ -3,10 +3,17 @@
 @use 'extends' as *;
 
 .page_footer{
-    position: relative;
+    margin: 0 auto;
+    padding: 80px 0 50px;
+
+    .footer_group_box{
+        @include flex;
+    }
+    
 }
 
 
 .footer_inner{
     @extend %main;
+    @include flex;
 }
