@@ -515,6 +515,7 @@ console.error('') --> @error
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  color: #888;
 }
 .group_info li:not(:first-child) {
   margin-left: 24px;

@@ -42,6 +42,7 @@
 
 .group_info{
     @include flex($j:flex-start);
+    color: #888;
     li{
         &:not(:first-child) {
             margin-left:24px;
