@@ -59,3 +59,7 @@ $close:(
 .icon_close{
     @include fontIcon(map-get($close,close));
 }
+
+.narrow{
+    height: 12px;
+}

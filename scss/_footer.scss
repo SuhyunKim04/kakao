@@ -1,3 +1,12 @@
 @use 'variables' as *;
 @use 'mixin' as *;
 @use 'extends' as *;
+
+.page_footer{
+    position: relative;
+}
+
+
+.footer_inner{
+    @extend %main;
+}

@@ -48,12 +48,6 @@
             }
         }
 
-        .main_btn_link{
-            img{
-                height: 12px;
-            }
-        }
-
         .ad_container{
             @include flex($a:flex-start,$j: flex-start);
 
