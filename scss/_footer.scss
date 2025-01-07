@@ -2,12 +2,33 @@
 @use 'mixin' as *;
 @use 'extends' as *;
 
-.page_footer{
-    margin: 0 auto;
-    padding: 80px 0 50px;
-
+.page_footer{ 
     .footer_group_box{
-        @include flex;
+        @include flex($g:100px);
+    }
+
+    .footer_today_container{
+        .footer_today_title{
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        li{
+            color: #333;
+        }
+    }
+
+    .footer_menu{
+        padding-top: 90px;
+        .footer_title{
+            font-weight: 600;
+            margin-bottom: 12px;
+           
+        }
+
+        li{
+            color: #888;
+        }
     }
     
 }
@@ -16,4 +37,14 @@
 .footer_inner{
     @extend %main;
     @include flex;
+    padding: 80px 0 50px;
+}
+
+.group_info{
+    @include flex($j:flex-start);
+    li{
+        &:not(:first-child) {
+            margin-left:24px;
+        }
+    }
 }
