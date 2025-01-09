@@ -3,9 +3,33 @@
 @use 'extends' as *;
 
 .page_footer{ 
+    padding-top: 50px;
     .footer_group_box{
-        @include flex($g:100px);
+        display: flex;
+        .footer_menu{
+            flex-basis: 50%;
+        }
+
     }
+
+    .fnb{
+        width: 100%;
+        @include flex($a:flex-start);
+        $itemSize: calc(100% / 6);
+
+        & > li{
+            flex-basis: $itemSize;
+            &:first-child{
+                transform: translateY(-30px);
+            }
+        }
+
+        .footer_group_container{
+            flex-basis: $itemSize * 2;
+        }
+    }
+    
+
 
     .footer_today_container{
         .footer_today_title{
@@ -19,7 +43,6 @@
     }
 
     .footer_menu{
-        padding-top: 90px;
         .footer_title{
             font-weight: 600;
             margin-bottom: 12px;
@@ -48,4 +71,34 @@
             margin-left:24px;
         }
     }
+}
+
+@include media(tablet){
+    .page_footer{
+        .fnb{
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            & > li{
+                flex-basis: 25%;
+            }
+
+            .footer_group_container{
+                flex-basis: 50%;
+            }
+        }
+    }
+    
+}
+
+@include media(tabletV){
+    .page_footer{
+        .fnb{
+            display: block;
+        }
+
+        .footer_group_box{
+            display: block;
+        }
+    }
+
 }
