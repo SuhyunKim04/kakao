@@ -130,6 +130,21 @@
 }
 
 @include media(tablet) {
+    .page_header{
+        .header_menu{
+            .main_menu{
+                & > li {
+                    &.active{
+                        .main_btn{
+                            background-color: transparent;
+                            color: #000;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }  
+    }
     .nav_dim{
         position:fixed;
         inset: 0 0 0 0;
@@ -210,5 +225,7 @@
 #tablet_menu{
     @include flex($d:column,$a:stretch,$g:30px);
 }
+
+
 
 

@@ -24,7 +24,7 @@
     }
  }
 
- @media screen and (max-width:map-get($breakpoints, tableV)) {
+ @media screen and (max-width:map-get($breakpoints, tabletV)) {
     %main{
      max-width:map-get($breakpoints, mobile );
     }

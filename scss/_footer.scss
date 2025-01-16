@@ -94,6 +94,20 @@
     .page_footer{
         .fnb{
             display: block;
+
+            .footer_menu{
+                display: none;
+            }
+
+            .footer_today_title{
+                margin-bottom: 10px;
+            }
+
+            .footer_today_container{
+                li{
+                    margin-bottom: 8px;
+                }
+            }
         }
 
         .footer_group_box{

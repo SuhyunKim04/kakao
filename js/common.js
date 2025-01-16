@@ -8,9 +8,6 @@ const header_main_btn = () => {
             menuReset();
             menu.parentNode.classList.add('active')
 
-            console.log(menu.parentNode)
-            console.log(menu.parentElement)
-            console.log(menu.closest('li'))
             dim.classList.add('open');
         })
     })
@@ -28,6 +25,16 @@ const header_main_btn = () => {
         })
     }
     focusOut();
+}
+
+const footer_menu = () => {
+    const fnb = document.querySelectorAll('.fnb');
+
+    fnb.forEach(menu => {
+        menu.addEventListener('click', () => {
+            menu.parentNode.classList.add('active')
+        })
+    })
 }
 
 // const theme = () => {
@@ -50,6 +57,7 @@ const dimm_wt_close = () => {
     const dimm_wt = document.querySelector('.dimm_wt');
     dimm_wt.classList.remove('open');
 }
+ 
 
 const search = () => {
     const search_icon = document.querySelector('.icon_search');
@@ -80,11 +88,14 @@ const open_tablet =() => {
     })
 }
 
-header_main_btn();
-// theme();
-search();
-open_tablet();
+ 
 
+document.body.addEventListener('htmx:afterSwap', () => {
+ 
+    header_main_btn();
+    // theme();
+    search();
+    open_tablet();
 
-console.log('hello')
-console.error('this is error')
+})
+  
