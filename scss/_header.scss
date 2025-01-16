@@ -185,10 +185,11 @@
             border: none;
         }
 
-            .main_menu{
-                display: block;
+        .main_menu{
+            display: block;
 
                 & > li.active {
+                    
                     .sub_menu_group {
                         display:block;
                     }
