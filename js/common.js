@@ -28,13 +28,15 @@ const header_main_btn = () => {
 }
 
 const footer_menu = () => {
-    const fnb = document.querySelectorAll('.fnb');
+    const footer_sub_menu = document.querySelectorAll('.footer_sub_menu');
 
-    fnb.forEach(menu => {
+    footer_sub_menu.forEach(menu => {
         menu.addEventListener('click', () => {
-            menu.parentNode.classList.add('active')
+            menu.parentNode.classList.add('active');
         })
     })
+
+
 }
 
 // const theme = () => {
@@ -96,6 +98,7 @@ document.body.addEventListener('htmx:afterSwap', () => {
     // theme();
     search();
     open_tablet();
+    footer_menu();
 
 })
   

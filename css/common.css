@@ -485,7 +485,8 @@ console.error('') --> @error
 }
 
 .page_footer {
-  padding-top: 50px;
+  border-top: 1px solid #000;
+  margin-top: 80px;
 }
 .page_footer .footer_group_box {
   display: flex;
@@ -557,8 +558,11 @@ console.error('') --> @error
   .page_footer .fnb {
     display: block;
   }
-  .page_footer .fnb .footer_menu {
+  .page_footer .fnb .footer_sub_menu {
     display: none;
+  }
+  .page_footer .fnb > li.active .footer_sub_menu {
+    display: block;
   }
   .page_footer .fnb .footer_today_title {
     margin-bottom: 10px;
@@ -568,6 +572,15 @@ console.error('') --> @error
   }
   .page_footer .footer_group_box {
     display: block;
+  }
+  .page_footer .line {
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .page_footer .line h4 {
+    margin: 20px 0;
+  }
+  .page_footer .line .footer_title:after {
+    content: "\f077";
   }
 }
 html, body {

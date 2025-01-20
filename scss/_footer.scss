@@ -1,9 +1,11 @@
 @use 'variables' as *;
 @use 'mixin' as *;
 @use 'extends' as *;
+@use 'icons' as *;
 
 .page_footer{ 
-    padding-top: 50px;
+    border-top: 1px solid #000;
+    margin-top: 80px;
     .footer_group_box{
         display: flex;
         .footer_menu{
@@ -95,9 +97,17 @@
         .fnb{
             display: block;
 
-            .footer_menu{
+            .footer_sub_menu{
                 display: none;
             }
+
+            & > li.active{
+                .footer_sub_menu{
+                    display: block;
+                }
+            }
+
+            
 
             .footer_today_title{
                 margin-bottom: 10px;
@@ -112,6 +122,18 @@
 
         .footer_group_box{
             display: block;
+        }
+
+        .line{
+            border-bottom: 1px solid #e6e6e6;
+
+            h4{
+                margin: 20px 0;
+            }
+
+            .footer_title:after{
+                content: '\f077';
+            }
         }
     }
 
