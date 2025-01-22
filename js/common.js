@@ -52,7 +52,6 @@ const footer_menu2 = () => {
   footer_titles.forEach((title, idx) => {
     title.addEventListener("click", (e) => {
       e.preventDefault();
-      e.stopPropagation();
 
       if (curEl === idx) {
         title.classList.remove("active");
