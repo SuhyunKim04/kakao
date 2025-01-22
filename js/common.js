@@ -26,16 +26,65 @@ const header_main_btn = () => {
     }
     focusOut();
 }
+ 
+
+const footer_menu2 = () => {
+    const footer_menus = document.querySelectorAll('.fnb > li:not(:first-child)');
+    let activeIdx = 0;
+    footer_menus.forEach( (menu, curIdx) => {
+        menu.addEventListener('click', (e) => {
+            const target = e.target;  
+            if(activeIdx  === curIdx) {
+                menu.classList.remove('active')
+            } else {
+                menu.classList.add('active')
+                activeIdx = curidx
+            }
+
+            /*
+            if(target.nodeName === 'A' || target.nodeName === 'H4') {
+                console.log('clicked menu', menu)
+                menu.classList.add('active')
+            }
+            */
+        })
+    })
+}
+
+
 
 const footer_menu = () => {
-    const footer_sub_menu = document.querySelectorAll('.footer_sub_menu');
+    const footer_titles = document.querySelectorAll('.footer_title');
 
-    footer_sub_menu.forEach(menu => {
-        menu.addEventListener('click', () => {
-            menu.parentNode.classList.add('active');
+    footer_titles.forEach( (title,index) => {
+        title.addEventListener('click', (e) => {
+            e.preventDefault();
+            reset_menu();
+            title.closest('li').classList.add('active'); 
         })
     })
 
+
+
+    function reset_menu(index) {
+
+        footer_titles.forEach( title => title.closest('li').classList.remove('active'))
+        // footer_titles.forEach( (title,idx) => { 
+        //     const isActive = title.closest('li').classList.contains('active');
+        //     if(isActive){
+              
+        //         if( index !== idx) { 
+        //             title.closest('li').classList.remove('active') 
+        //         } 
+        //     }
+            
+        // })
+        // title 에서 열려있는 메뉴는 찾아서 닫아줘야해
+       
+
+        // footer_titles.closest('li').classList.remove('active')
+        
+    }
 
 }
 
@@ -98,7 +147,9 @@ document.body.addEventListener('htmx:afterSwap', () => {
     // theme();
     search();
     open_tablet();
-    footer_menu();
+    //footer_menu();
+
+    footer_menu2();
 
 })
   

@@ -506,6 +506,9 @@ console.error('') --> @error
 .page_footer .fnb > li:first-child {
   transform: translateY(-30px);
 }
+.page_footer .fnb h4 {
+  font-weight: 600;
+}
 .page_footer .fnb .footer_group_container {
   flex-basis: 33.3333333333%;
 }
@@ -516,6 +519,7 @@ console.error('') --> @error
 }
 .page_footer .footer_today_container li {
   color: #333;
+  margin-top: 8px;
 }
 .page_footer .footer_menu .footer_title {
   font-weight: 600;
@@ -523,6 +527,7 @@ console.error('') --> @error
 }
 .page_footer .footer_menu li {
   color: #888;
+  margin-top: 8px;
 }
 
 .footer_inner {
@@ -530,6 +535,11 @@ console.error('') --> @error
   justify-content: space-between;
   align-items: center;
   padding: 80px 0 50px;
+}
+.footer_inner .footer_left {
+  background: #eee;
+  padding: 10px 20px 12px;
+  border-radius: 24px;
 }
 
 .group_info {
@@ -561,8 +571,17 @@ console.error('') --> @error
   .page_footer .fnb .footer_sub_menu {
     display: none;
   }
+  .page_footer .fnb > li {
+    border-bottom: 1px solid red;
+  }
+  .page_footer .fnb > li:first-child {
+    transform: translateY(0);
+  }
   .page_footer .fnb > li.active .footer_sub_menu {
     display: block;
+  }
+  .page_footer .fnb > li.active .footer_title:after {
+    content: "\f077";
   }
   .page_footer .fnb .footer_today_title {
     margin-bottom: 10px;
@@ -573,19 +592,37 @@ console.error('') --> @error
   .page_footer .footer_group_box {
     display: block;
   }
-  .page_footer .line {
-    border-bottom: 1px solid #e6e6e6;
+  .page_footer .footer_title {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: space-between;
+    padding: 16px 0;
   }
-  .page_footer .line h4 {
-    margin: 20px 0;
-  }
-  .page_footer .line .footer_title:after {
-    content: "\f077";
+  .page_footer .footer_title::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-size: 14px;
+    font-weight: 900;
+    color: inherit !important;
   }
 }
+.top {
+  background-color: #888;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: auto 40px 40px auto;
+  border-radius: 20px;
+}
+
 html, body {
   width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
