@@ -69,7 +69,34 @@ const footer_menu2 = () => {
     // 모든 요소에서 'active' 제거
     footer_titles.forEach((item) => item.classList.remove("active"));
   }
-};
+}
+
+const footer_menu4 = () => {
+    const footer_titles = document.querySelectorAll(".fnb > li");
+    let curEl;
+    footer_titles.forEach((title, idx) => {
+      title.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log('clicked')
+        reset_menu(title)
+        let hasActive = title.classList.contains('active'); 
+        console.log('before toggle', hasActive)
+        title.classList.toggle('active')
+        console.log('after toggle', hasActive)
+      });
+    });
+  
+  
+    function reset_menu(activeMenu) {
+      footer_titles.forEach(menu => {
+          // 클릭된 메뉴와 동일하지 않은 경우에만 'on' 제거
+          if (menu !== activeMenu) {
+              menu.classList.remove('active');
+          }
+      });
+      }
+     
+  };
 
 const footer_menu = () => {
   const footer_titles = document.querySelectorAll(".footer_title");
