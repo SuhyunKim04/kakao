@@ -1,3 +1,13 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+@use 'extends' as *;
+@use 'icons' as *;
+
 .main{
-    position: absolute;
+    .main_video{
+        width: 100%;
+        video{
+            width: 50%;
+        }
+    }
 }
