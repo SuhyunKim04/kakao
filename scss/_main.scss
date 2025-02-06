@@ -4,7 +4,11 @@
 @use 'icons' as *;
 
 .main{
+    position: relative;
+    @extend %main;
     .main_video{
+        top:90px;
+        
         width: 100%;
         video{
             width: 50%;
