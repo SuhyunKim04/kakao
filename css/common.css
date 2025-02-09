@@ -625,10 +625,9 @@ console.error('') --> @error
 }
 .main .main_video {
   top: 90px;
-  width: 100%;
 }
 .main .main_video video {
-  width: 50%;
+  width: 1200px;
 }
 
 html, body {

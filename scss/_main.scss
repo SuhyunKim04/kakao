@@ -8,10 +8,8 @@
     @extend %main;
     .main_video{
         top:90px;
-        
-        width: 100%;
         video{
-            width: 50%;
+            width: 1200px;
         }
     }
 }
