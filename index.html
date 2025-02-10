@@ -193,28 +193,39 @@
     <div hx-get="./layouts/search.html" hx-swap="outerHTML" hx-trigger="load">
     </div>
 
-
-
     <section class="main">
         <article class="main_video">
-            <video src="./video/12572039_3840_2160_25fps.mp4" loop autoplay muted playsinlne></video>
+            <div class="video_container">
+                <video src="./video/12572039_3840_2160_25fps.mp4" loop autoplay muted playsinlne></video>
+            </div>
+
+            <a href="#" class="video_right">
+                <strong>
+                    Contents roundup
+                </strong>
+                <i class="fa-solid fa-lightbulb"></i>
+            </a>
         </article>
 
-        <article>
+        <article class="main_inner_1">
             <p>People who donated with Kakao</p>
-                <p class="num1">0</p>
-                <p class="num2">0</p>
-                <p class="num3">0</p>
+            <p class="counting">
+                <span class="num1">0</span>,<span class="num2">0</span>,<span class="num3">0</span>
+            </p>
         </article>
 
-        <article>
+        <article class="main_inner_2">
             <strong>Safety</strong>
             <p>How to avoid scams</p>
             <em>&#35;Digital literacy</em>
         </article>
 
+        <article class="main_inner_3">
+
+        </article>
+
     </section>
-   
+
 
     <div hx-get="./layouts/footer.html" hx-swap="outerHTML" hx-trigger="load">
     </div>

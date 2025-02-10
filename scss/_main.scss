@@ -1,15 +1,31 @@
-@use 'variables' as *;
-@use 'mixin' as *;
-@use 'extends' as *;
-@use 'icons' as *;
+@use "variables" as *;
+@use "mixin" as *;
+@use "extends" as *;
+@use "icons" as *;
 
-.main{
-    position: relative;
-    @extend %main;
-    .main_video{
-        top:90px;
-        video{
-            width: 1200px;
-        }
+.main {
+  display: grid;
+  grid-template-columns: auto 272px;
+  grid-template-rows: 272px 340px 164px;
+  gap: 14px;
+  @extend %main;
+  margin-top: 90px;
+  .main_video {
+    grid-row: 1/4;
+    .video_container {
+      @include videoContainer;
     }
+  }
+
+  .main_inner_1 {
+    background-color: olive;
+  }
+
+  .main_inner_2 {
+    background-color: violet;
+  }
+
+  .main_inner_3 {
+    background-color: chocolate;
+  }
 }

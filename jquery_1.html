@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1 {
+            background-color: olive;
+            color: #fff;
+            position: absolute;
+            inset: 0 0 0 0;
+        }
+
+        .container2 {
+            background-color: tomato;
+            color: #fff;
+            position: absolute;
+            inset: 0 0 0 0;
+            display: none;
+        }
+
+
+        .wrap {
+            outline: 2px solid solid;
+            width: 250px;
+            height: 250px;
+            position: relative;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            const $btnA = $('.btn-a')
+            const $btnB = $('.btn-b')
+            $btnA.click(function () {
+                $('.container1').fadeIn();
+                $('.container2').fadeOut();
+            })
+
+            $btnB.click(function () {
+                $('.container2').fadeIn();
+                $('.container1').fadeOut();
+            })
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container1">A</div>
+        <div class="container2">B</div>
+    </div>
+
+    <button type="button" class="btn-a">show A</button>
+    <button type="button" class="btn-b">show B</button>
+
+
+</body>
+
+</html>

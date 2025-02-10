@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequential Counter</title>
+    <style>
+        .counter {
+            font-size: 48px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="counter">
+        <span class="num1">00</span>,<span class="num2">000</span>,<span class="num3">000</span>
+    </div>
+
+    <script>
+        function animateValue(element, start, end, duration, step = 1) {
+            let current = start;
+            const increment = step;
+            const totalSteps = Math.ceil((end - start) / increment);
+            const stepDuration = duration / totalSteps;
+
+            function update() {
+                if (current <= end) {
+                    element.textContent = String(current).padStart(3, '0');
+                    current += increment;
+                    setTimeout(update, stepDuration);
+                }
+            }
+            update();
+        }
+
+        function startSequentialCount() {
+            const num1 = document.querySelector('.num1');
+            const num2 = document.querySelector('.num2');
+            const num3 = document.querySelector('.num3');
+
+            // 첫 번째 숫자 (백->십->일 순서로)
+            setTimeout(() => {
+                // 백 단위
+                animateValue(num1, 0, 60, 1000, 10);
+                // 십 단위
+                setTimeout(() => {
+                    animateValue(num1, 60, 63, 500, 1);
+                }, 1000);
+            }, 0);
+
+            // 두 번째 숫자
+            setTimeout(() => {
+                // 백 단위
+                animateValue(num2, 0, 200, 1000, 100);
+                // 십 단위
+                setTimeout(() => {
+                    animateValue(num2, 200, 260, 800, 10);
+                    // 일 단위
+                    setTimeout(() => {
+                        animateValue(num2, 260, 266, 500, 1);
+                    }, 800);
+                }, 1000);
+            }, 500);
+
+            // 세 번째 숫자
+            setTimeout(() => {
+                // 백 단위
+                animateValue(num3, 0, 300, 1000, 100);
+                // 십 단위
+                setTimeout(() => {
+                    animateValue(num3, 300, 310, 800, 10);
+                    // 일 단위
+                    setTimeout(() => {
+                        animateValue(num3, 310, 319, 500, 1);
+                    }, 800);
+                }, 1000);
+            }, 1000);
+        }
+
+        // 페이지 로드 시 자동 시작
+        window.addEventListener('load', startSequentialCount);
+    </script>
+</body>
+
+</html>
