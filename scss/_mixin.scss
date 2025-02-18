@@ -1,0 +1,130 @@
+@use "variables" as *;
+// @use 'extends' as *;
+
+@mixin flex($j: space-between, $a: center, $d: null, $g: null) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+  flex-direction: $d;
+  gap: $g; // 3px 5px -> row golumn;
+}
+
+@mixin grid($rg: null, $cg: null, $gtc: null, $gtr: null) {
+  display: grid;
+  row-gap: $rg;
+  column-gap: $cg;
+  grid-template-columns: $gtc;
+  grid-template-rows: $gtr;
+}
+
+@mixin fixed($l: 0, $t: 0, $r: 0, $b: 0) {
+  position: fixed;
+  left: $l;
+  right: $r;
+  top: $t;
+  bottom: $b;
+}
+
+@mixin posFull($p: absolute, $l: 0, $r: 0, $b: 0, $t: 0) {
+  position: $p;
+  left: $l;
+  right: $r;
+  bottom: $b;
+  top: $t;
+}
+
+@mixin posCenter($way: y, $pos: absolute) {
+  position: $p;
+  @if ($way == y) {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@mixin iconBg($path, $size: 24, $start: null, $end: null, $type: svg) {
+  display: block;
+  background: no-repeat center center/contain;
+  $size: $size;
+
+  width: 24px;
+  height: 24px;
+
+  @debug $icon;
+
+  @if ($start == null) {
+    background-image: url($icon + "#{$path}.#{$type}");
+  } @else {
+    @for $i from $start through $end {
+      &:nth-child(#{$i}) {
+        background-image: url($icon + "#{$path}#{$i}.#{$type}");
+      }
+    }
+  }
+}
+
+@mixin dim($color: #000, $alpha: 0.5, $p: fixed) {
+  @if $p != null {
+    @include posFull($p);
+  }
+  background-color: rgba($color, $alpha);
+}
+
+@mixin media-base($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media all and (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error 'Can not find breakpoint';
+  }
+}
+
+@mixin corner($size: 36px, $p: before) {
+  &:#{$p} {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M20 22h2V0H0v2c11 0 20 9 20 20z' fill-rule='evenodd' clip-rule='evenodd' fill='%23fff'/%3E%3C/svg%3E");
+
+    width: $size;
+    height: $size;
+    position: absolute;
+    @content;
+  }
+}
+
+/*
+ console.log('') --> @debug
+ console.error('') --> @error
+ */
+
+@mixin fullMedia {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@mixin mediaDim($way: after, $op: 0.2) {
+  position: relative;
+  &::#{$way} {
+    content: " ";
+    inset: 0 0 0 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+@mixin videoContainer($way: after, $op: 0.2) {
+  height: 100%;
+  @include mediaDim($way, $op);
+
+  video {
+    @include fullMedia;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container ul {
+            display: none;
+        }
+
+        .container>li.on ul {
+            display: block;
+        }
+
+        .container>li.on a {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="container">
+        <li>
+            <a href="#">
+                <h1>menu1</h1>
+            </a>
+            <ul>
+                <li><a href="#">Sub Menu</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <h1>menu2</h1>
+            </a>
+            <ul>
+                <li><a href="#">Sub Menu</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <h1>menu3</h1>
+            </a>
+            <ul>
+                <li><a href="#">Sub Menu</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        const menus = document.querySelectorAll('.container > li')
+        menus.forEach(menu => {
+            menu.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log(menu)
+                closeActive(menu)
+                menu.classList.toggle('on')
+            })
+
+            function closeActive(activeMenu) {
+                menus.forEach(menu => {
+                    // 클릭된 메뉴와 동일하지 않은 경우에만 'on' 제거
+                    if (menu !== activeMenu) {
+                        menu.classList.remove('on');
+                    }
+                });
+            }
+        })
+
+    </script>
+</body>
+
+</html>
