@@ -671,6 +671,7 @@ input:focus {
   top: 0;
   right: 0;
   background-color: #fff;
+  border-bottom-left-radius: 40px;
 }
 .main .main_video .video_right .bubble {
   color: #fff;
@@ -699,18 +700,53 @@ input:focus {
   border-radius: 32px;
   margin-left: 8px;
 }
-.main .main_inner_1 .inner_slide {
+.main .main_inner_1 {
+  background-color: red;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.main .main_inner_1 .inner_slide_1 {
   background-color: #fae100;
   text-align: center;
-  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  inset: 0 0 0 0;
 }
-.main .main_inner_1 .inner_slide .counting {
+.main .main_inner_1 .inner_slide_1 .counting {
   font-weight: 600;
-  font-size: 26px;
+  font-size: 36px;
 }
-.main .main_inner_1 .inner_slide p {
-  width: 100px;
-  margin: 0 auto;
+.main .main_inner_1 .inner_slide_2 {
+  display: none;
+  background-color: #666;
+  position: absolute;
+  inset: 0 0 0 0;
+}
+.main .main_inner_1 .inner_slide_2 strong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .main_inner_1 .slide_button {
+  position: absolute;
+  inset: auto auto 20px 50%;
+  transform: translateX(-50%);
+}
+.main .main_inner_1 .slide_button button {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #888;
+}
+.main .main_inner_1 .slide_button button.active {
+  background-color: #000;
+  width: 24px;
+  border-color: #000;
 }
 .main .main_inner_2 {
   background-color: #f3f3f3;

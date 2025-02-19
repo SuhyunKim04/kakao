@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 200px;
+            outline: 1px solid red;
+        }
+
+        .container:hover p {
+            animation-play-state: paused;
+        }
+
+        @keyframes moving {
+            0% {
+                transform: translateX(0)
+            }
+
+            100% {
+                transform: translateX(400px)
+            }
+        }
+
+        .container p {
+            animation: moving 5s infinite alternate linear;
+        }
+
+        ul {
+            display: flex;
+            gap: 30px;
+            height: 500px;
+        }
+
+        li {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>Hello, world</p>
+    </div>
+
+    <ul>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ul>
+</body>
+
+</html>

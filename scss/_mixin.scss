@@ -25,12 +25,32 @@
   bottom: $b;
 }
 
-@mixin posFull($p: absolute, $l: 0, $r: 0, $b: 0, $t: 0) {
+@mixin posFull($p: absolute) {
   position: $p;
-  left: $l;
-  right: $r;
-  bottom: $b;
-  top: $t;
+  inset: 0 0 0 0;
+}
+
+@mixin alignCenter($way: x) {
+  @if ($way == y) {
+    transform: translateY(-50%);
+  } @else {
+    transform: translateX(-50%);
+  }
+}
+
+@mixin position(
+  $l: auto,
+  $t: auto,
+  $r: auto,
+  $b: auto,
+  $p: absolute,
+  $center: null
+) {
+  position: $p;
+  inset: $t $r $b $l;
+  @if $center {
+    @include alignCenter($center);
+  }
 }
 
 @mixin posCenter($way: y, $pos: absolute) {
@@ -126,5 +146,19 @@
 
   video {
     @include fullMedia;
+  }
+}
+
+@mixin indicator() {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #888;
+
+  &.active {
+    background-color: #000;
+    width: 24px;
+    border-color: #000;
   }
 }

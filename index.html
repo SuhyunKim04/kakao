@@ -11,6 +11,7 @@
     <script src="https://unpkg.com/htmx.org@2.0.4"
         integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
         crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -213,16 +214,24 @@
             </a>
         </article>
 
-        <article class="main_inner_1">
-            <div class="inner_slide">
+        <article class="main_inner_1 slide-container">
+            <div class="inner_slide_1 slide_item">
                 <p>People who donated with Kakao</p>
                 <p class="counting">
                     <span class="num1">0</span>,<span class="num2">0</span>,<span class="num3">0</span>
                 </p>
                 <p>case</p>
             </div>
-            <div>
-
+            <div class="inner_slide_2">
+                <strong>Impact Choco</strong>
+            </div>
+            <div class="slide_button">
+                <button type="button" class="active item_1">
+                    <span class="blind">1번페이지</span>
+                </button>
+                <button type="button" class="item_2">
+                    <span class="blind">2번페이지</span>
+                </button>
             </div>
 
         </article>
@@ -245,6 +254,7 @@
     </div>
 
     <script src="./js/common.js"></script>
+    <script src="./js/slide.js"></script>
 </body>
 
 </html>

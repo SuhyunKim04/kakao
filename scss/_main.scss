@@ -23,6 +23,7 @@
       top: 0;
       right: 0;
       background-color: #fff;
+      border-bottom-left-radius: 40px;
 
       .bubble {
         color: #fff;
@@ -56,17 +57,35 @@
   }
 
   .main_inner_1 {
-    .inner_slide {
+    background-color: red;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    .inner_slide_1 {
       background-color: #fae100;
       text-align: center;
-      border-radius: 20px;
+      @include flex($d: column, $j: center);
+      @include posFull;
       .counting {
         font-weight: 600;
-        font-size: 26px;
+        font-size: 36px;
       }
-      p {
-        width: 100px;
-        margin: 0 auto;
+    }
+
+    .inner_slide_2 {
+      display: none;
+      background-color: #666;
+      @include posFull;
+      strong {
+        @include flex;
+      }
+    }
+
+    .slide_button {
+      @include position($b: 20px, $l: 50%, $center: x);
+
+      button {
+        @include indicator;
       }
     }
   }

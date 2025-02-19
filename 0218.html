@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <p id="msg">MSG</p>
+
+
+    <div class="slideA">
+        <div class="item1">Hello</div>
+        <div class="item2">B</div>
+    </div>
+    <div class="slideB">
+        <div class="item1">World</div>
+        <div class="item2">B</div>
+    </div>
+
+    <script>
+        function printItem(slideName) {
+            const slide = $(slideName);
+            const item1 = slide.find('.item1')
+
+            console.log(`${slideName} : ${item1.text()}`)
+
+        }
+
+        printItem('.slideA')
+        printItem('.slideB')
+
+    </script>
+</body>
+
+</html>
