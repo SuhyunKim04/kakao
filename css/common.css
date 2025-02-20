@@ -700,13 +700,13 @@ input:focus {
   border-radius: 32px;
   margin-left: 8px;
 }
-.main .main_inner_1 {
+.main .slide_container {
   background-color: red;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
 }
-.main .main_inner_1 .inner_slide_1 {
+.main .slide_container .slide_item_1 {
   background-color: #fae100;
   text-align: center;
   display: flex;
@@ -716,34 +716,34 @@ input:focus {
   position: absolute;
   inset: 0 0 0 0;
 }
-.main .main_inner_1 .inner_slide_1 .counting {
+.main .slide_container .slide_item_1 .counting {
   font-weight: 600;
   font-size: 36px;
 }
-.main .main_inner_1 .inner_slide_2 {
+.main .slide_container .slide_item_2 {
   display: none;
   background-color: #666;
   position: absolute;
   inset: 0 0 0 0;
 }
-.main .main_inner_1 .inner_slide_2 strong {
+.main .slide_container .slide_item_2 strong {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.main .main_inner_1 .slide_button {
+.main .slide_container .slide_button {
   position: absolute;
   inset: auto auto 20px 50%;
   transform: translateX(-50%);
 }
-.main .main_inner_1 .slide_button button {
+.main .slide_container .slide_button button {
   width: 8px;
   height: 8px;
   border-radius: 4px;
   background-color: #fff;
   border: 1px solid #888;
 }
-.main .main_inner_1 .slide_button button.active {
+.main .slide_container .slide_button button.active {
   background-color: #000;
   width: 24px;
   border-color: #000;

@@ -56,12 +56,12 @@
     }
   }
 
-  .main_inner_1 {
+  .slide_container {
     background-color: red;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    .inner_slide_1 {
+    .slide_item_1 {
       background-color: #fae100;
       text-align: center;
       @include flex($d: column, $j: center);
@@ -72,7 +72,7 @@
       }
     }
 
-    .inner_slide_2 {
+    .slide_item_2 {
       display: none;
       background-color: #666;
       @include posFull;
