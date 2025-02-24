@@ -46,7 +46,7 @@
             )
 
             function removeAll() {
-                lis.forEach(li => {
+                lis.forEach((li, index) => {
                     li.classList.remove('active');
                 })
             }

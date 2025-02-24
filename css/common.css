@@ -501,9 +501,17 @@ input:focus {
   display: inline-block;
 }
 
+body.darkmode {
+  background-color: #222;
+  color: #fff;
+}
+
 .page_footer {
   border-top: 1px solid #000;
   margin-top: 80px;
+}
+.page_footer a {
+  white-space: nowrap;
 }
 .page_footer .footer_group_box {
   display: flex;
@@ -553,10 +561,18 @@ input:focus {
   align-items: center;
   padding: 80px 0 50px;
 }
-.footer_inner .footer_left {
-  background: #eee;
+.footer_inner .family_site {
   padding: 10px 20px 12px;
   border-radius: 24px;
+  position: relative;
+}
+.footer_inner .family_site ul {
+  position: absolute;
+  bottom: 60px;
+  background: #eee;
+}
+.footer_inner .family_site ul a {
+  background: #eee;
 }
 
 .group_info {
