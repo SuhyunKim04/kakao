@@ -57,7 +57,7 @@
   }
 
   .slide_container {
-    background-color: red;
+    background-color: #f3f3f3;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
@@ -90,27 +90,29 @@
     }
   }
 
-  .main_inner_2 {
+  .slide_container_seconde {
     background-color: #f3f3f3;
     padding: 12px 0 0 12px;
     border-radius: 20px;
 
-    strong {
-      background-color: #fae100;
-      padding: 6px 10px;
-      display: inline-block;
-      font-weight: 400;
-      border-radius: 8px;
-    }
-    p {
-      width: 100px;
-    }
-    em {
-      color: #666;
+    .slide_item_1_seconde {
+      strong {
+        background-color: #fae100;
+        padding: 6px 10px;
+        display: inline-block;
+        font-weight: 400;
+        border-radius: 8px;
+      }
+      p {
+        width: 100px;
+      }
+      em {
+        color: #666;
+      }
     }
   }
 
-  .main_inner_3 {
+  .slide_item_3 {
     background-color: chocolate;
   }
 }

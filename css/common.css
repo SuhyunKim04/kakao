@@ -701,7 +701,7 @@ input:focus {
   margin-left: 8px;
 }
 .main .slide_container {
-  background-color: red;
+  background-color: #f3f3f3;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
@@ -748,25 +748,25 @@ input:focus {
   width: 24px;
   border-color: #000;
 }
-.main .main_inner_2 {
+.main .slide_container_seconde {
   background-color: #f3f3f3;
   padding: 12px 0 0 12px;
   border-radius: 20px;
 }
-.main .main_inner_2 strong {
+.main .slide_container_seconde .slide_item_1_seconde strong {
   background-color: #fae100;
   padding: 6px 10px;
   display: inline-block;
   font-weight: 400;
   border-radius: 8px;
 }
-.main .main_inner_2 p {
+.main .slide_container_seconde .slide_item_1_seconde p {
   width: 100px;
 }
-.main .main_inner_2 em {
+.main .slide_container_seconde .slide_item_1_seconde em {
   color: #666;
 }
-.main .main_inner_3 {
+.main .slide_item_3 {
   background-color: chocolate;
 }
 

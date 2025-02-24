@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li.active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="containerA">
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+    <ul class="containerB">
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+    <ul class="containerC">
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+
+    <script>
+        function onActive(container) {
+            const wrap = document.querySelector(container)
+            const lis = wrap.querySelectorAll('li')
+
+
+            lis.forEach(li => {
+
+                li.addEventListener('click', (e) => {
+                    removeAll();
+                    e.target.classList.add('active');
+                })
+
+            }
+            )
+
+            function removeAll() {
+                lis.forEach(li => {
+                    li.classList.remove('active');
+                })
+            }
+        }
+
+
+
+        onActive('.containerA');
+        onActive('.containerB');
+        onActive('.containerC');
+    </script>
+</body>
+
+</html>
