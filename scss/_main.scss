@@ -36,16 +36,12 @@
     }
 
     .video_left {
-      display: flex;
-      align-items: center;
+      @include flex($a: center);
       background-color: #fff;
       position: absolute;
       bottom: 0;
       .arrow {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex($j: center, $a: center, $d: column);
         background-color: #000;
         color: #fff;
         width: 64px;
@@ -114,5 +110,18 @@
 
   .slide_item_3 {
     background-color: chocolate;
+  }
+}
+
+@include media(pc) {
+  .main {
+    grid-template-columns: auto 180px;
+    grid-template-rows: 180px 170px 120px;
+  }
+}
+
+@include media(tablet) {
+  .main {
+    grid-template-columns: auto 180px;
   }
 }

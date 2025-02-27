@@ -501,11 +501,6 @@ input:focus {
   display: inline-block;
 }
 
-body.darkmode {
-  background-color: #222;
-  color: #fff;
-}
-
 .page_footer {
   border-top: 1px solid #000;
   margin-top: 80px;
@@ -699,6 +694,7 @@ body.darkmode {
 }
 .main .main_video .video_left {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: #fff;
   position: absolute;
@@ -706,9 +702,9 @@ body.darkmode {
 }
 .main .main_video .video_left .arrow {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: #000;
   color: #fff;
   width: 64px;
@@ -786,6 +782,17 @@ body.darkmode {
   background-color: chocolate;
 }
 
+@media all and (max-width: 1440px) {
+  .main {
+    grid-template-columns: auto 180px;
+    grid-template-rows: 180px 170px 120px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .main {
+    grid-template-columns: auto 180px;
+  }
+}
 html, body {
   width: 100%;
   overflow-x: hidden;
