@@ -3,6 +3,20 @@
 @use "extends" as *;
 @use "icons" as *;
 
+body {
+  color: map-get($theme, light-text);
+
+  &.darkmode {
+    background-color: map-get($theme, dark-bg);
+    color: map-get($theme, dark-text);
+  }
+}
+
+body.darkmode {
+  background-color: #222;
+  color: #fff;
+}
+
 .main {
   display: grid;
   grid-template-columns: auto 272px;
@@ -58,10 +72,15 @@
     border-radius: 20px;
     overflow: hidden;
     .slide_item_1 {
-      background-color: #fae100;
+      background-color: #f7f7f7;
       text-align: center;
       @include flex($d: column, $j: center);
       @include posFull;
+      strong {
+        display: inline-block;
+        @include position($p: absolute, $t: 14px, $l: 14px);
+        font-weight: 300;
+      }
       .counting {
         font-weight: 600;
         font-size: 36px;
@@ -70,11 +89,7 @@
 
     .slide_item_2 {
       display: none;
-      background-color: #666;
       @include posFull;
-      strong {
-        @include flex;
-      }
     }
 
     .slide_button {
@@ -113,10 +128,29 @@
   }
 }
 
+.main {
+  .first {
+    .slide_item_1 {
+      background-color: #fae100;
+    }
+    .slide_item_2 {
+      background-color: #666;
+    }
+  }
+}
+
 @include media(pc) {
   .main {
     grid-template-columns: auto 180px;
     grid-template-rows: 180px 170px 120px;
+    .slide_container {
+      .slide_item_1 {
+        font-size: 16px;
+        .counting {
+          font-size: 18px;
+        }
+      }
+    }
   }
 }
 

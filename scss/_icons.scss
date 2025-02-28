@@ -64,6 +64,10 @@ $main: (
   @include iconBg("narrow");
 }
 
+.icon_narrow_f {
+  @include iconBg("narrow", $size: 12px);
+}
+
 .icon_close {
   @include fontIcon(map-get($close, close));
 }

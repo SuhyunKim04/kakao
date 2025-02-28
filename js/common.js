@@ -1,5 +1,6 @@
 const header_main_btn = () => {
   const main_menu = document.querySelectorAll(".main_btn");
+
   const dim = document.querySelector(".dimm_bk");
 
   main_menu.forEach((menu) => {
@@ -25,26 +26,6 @@ const header_main_btn = () => {
   }
   focusOut();
 };
-
-// const footer_menu3 = () => {
-//   const menus = document.querySelectorAll(".fnb > li:not(:first-child)");
-//   menus[0].classList.add("active");
-//   menus.forEach((menu) => {
-//     menu.addEventListener("click", (e) => {
-//       e.preventDefault();
-//       closeActive(menu);
-//       menu.classList.toggle("active");
-//     });
-//   });
-
-//   function closeActive(activeMenu) {
-//     menus.forEach((menu) => {
-//       if (menu !== activeMenu && menu.classList.contains("active")) {
-//         menu.classList.remove("active");
-//       }
-//     });
-//   }
-// };
 
 const footer_menu = () => {
   const footer_titles = document.querySelectorAll(".fnb > li");
@@ -215,11 +196,34 @@ const number = () => {
   }, 1500);
 };
 
+const topbtn_control = () => {
+  const top_btn = document.querySelector(".top");
+  console.log("top : ", top_btn);
+  window.addEventListener("scroll", () => {
+    let now = window.scrollY;
+    top_btn.classList.toggle("on", now > 300);
+    /*console.log(window.scrollY);
+    if (window.scrollY > 600) {
+      top_btn.classList.add("on");
+    } else {
+      top_btn.classList.remove("on");
+    }
+      */
+  });
+};
+// const family_footer = () => {
+//   const family_inner = document.querySelector(".family_inner");
+//   family_inner.addEventListener("click", (e) => {
+//     e.currentTarget.classList.add("open");
+//   });
+// };
+
 document.body.addEventListener("htmx:afterSwap", () => {
   footer_menu();
-  header_main_btn();
+
   // theme();
-  search();
+
   open_tablet();
   number();
+  // family_footer();
 });

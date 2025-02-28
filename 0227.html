@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        .list {
+            display: flex;
+            gap: 20px;
+            height: 480px;
+            animation: slide 10s;
+        }
+
+        .list:hover {
+            animation-play-state: paused;
+        }
+
+
+
+        .list li {
+            background-color: gold;
+            border-radius: 20px;
+            flex: 0 0 320px;
+        }
+
+
+        @keyframes slide {
+            from {
+                transform: translateX(0)
+            }
+
+            to {
+                transform: translateX(-1000px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    ul.list>(li{menu $})*6
+
+    <button type="button" class="btn">button</button>
+    <div class="container">
+        <ul class="list">
+            <li>menu 1</li>
+            <li>menu 2</li>
+            <li>menu 3</li>
+            <li>menu 4</li>
+            <li>menu 5</li>
+            <li>menu 6</li>
+            <li>menu 7</li>
+            <li>menu 8</li>
+        </ul>
+    </div>
+    <script>
+        const btn = document.querySelector('.btn');
+        const ul = document.querySelector('.list')
+        let status = true;
+
+        btn.addEventListener('click', () => {
+            status = !status;
+            let now = status ? 'running' : 'paused';
+            ul.style.animationPlayState = now;
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+@use "variables" as *;
+@use "mixin" as *;
+@use "extends" as *;
+@use "icons" as *;
+.cards {
+  h2 {
+    font-size: 30px;
+  }
+
+  .cards_box {
+    height: 440px;
+    width: 317px;
+    @include flex;
+    .cards_item {
+      background-color: bisque;
+      border-radius: 20px;
+      height: 440px;
+      width: 317px;
+    }
+  }
+}

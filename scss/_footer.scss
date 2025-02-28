@@ -3,14 +3,10 @@
 @use "extends" as *;
 @use "icons" as *;
 
-// body.darkmode {
-//   background-color: #222;
-//   color: #fff;
-// }
-
 .page_footer {
   border-top: 1px solid #000;
   margin-top: 80px;
+  @extend %main;
 
   a {
     white-space: nowrap;
@@ -77,12 +73,19 @@
     padding: 10px 20px 12px;
     border-radius: 24px;
     position: relative;
-
+    color: #888;
+    background-color: #eee;
+    width: 200px;
     ul {
       position: absolute;
       bottom: 60px;
-      background: #eee;
-
+      background-color: #eee;
+      padding: 20px 40px;
+      border-radius: 20px;
+      display: none;
+      li {
+        padding-bottom: 8px;
+      }
       a {
         background: #eee;
       }
@@ -170,10 +173,22 @@
   background-color: #888;
   width: 40px;
   height: 40px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   position: fixed;
   inset: auto 40px 40px auto;
   border-radius: 20px;
+  translate: 0 20px;
+
+  &.on {
+    display: flex;
+    animation: showUp 0.5s 0.2s both;
+  }
+}
+
+@keyframes showUp {
+  to {
+    translate: 0 0;
+  }
 }

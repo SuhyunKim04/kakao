@@ -12,11 +12,12 @@
         integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
         crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+
 </head>
 
-<body class="darkmode">
+<body>
 
-    <header class="page_header">
+    <!-- <header class="page_header">
         <div class="header_inner">
             <h1><a href="/index.html">Choco</a></h1>
             <div class="nav_wrap">
@@ -188,93 +189,101 @@
                 </button>
             </div>
         </div>
-    </header>
+    </header> -->
+
+    <div>
+        <div hx-get="./layouts/header.html" hx-swap="outerHTML" hx-trigger="load">
+        </div>
 
 
-    <div hx-get="./layouts/search.html" hx-swap="outerHTML" hx-trigger="load">
-    </div>
+        <section class="main">
+            <article class="main_video">
+                <div class="video_container">
+                    <video src="./video/12572039_3840_2160_25fps.mp4" loop autoplay muted playsinlne></video>
+                    <!-- <img src="./images/icons/corner_left.svg" alt="corner"> -->
+                </div>
 
-    <section class="main">
-        <article class="main_video">
-            <div class="video_container">
-                <video src="./video/12572039_3840_2160_25fps.mp4" loop autoplay muted playsinlne></video>
-            </div>
+                <a href="#" class="video_right">
+                    <strong class="bubble">
+                        Contents roundup
+                    </strong>
+                    <i class="icon_bulb"></i>
+                </a>
+                <a href="#" class="video_left">
+                    <strong>
+                        View More
+                    </strong>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </a>
+            </article>
 
-            <a href="#" class="video_right">
-                <strong class="bubble">
-                    Contents roundup
-                </strong>
-                <i class="icon_bulb"></i>
-            </a>
-            <a href="#" class="video_left">
-                <strong>
-                    View More
-                </strong>
-                <i class="fa-solid fa-arrow-right arrow"></i>
-            </a>
-        </article>
+            <article class="slide_container first">
+                <div class="slide_item_1 item">
+                    <p>People who donated with Kakao</p>
+                    <p class="counting">
+                        <span class="num1">0</span>,<span class="num2">0</span>,<span class="num3">0</span>
+                    </p>
+                    <p>case</p>
+                </div>
+                <div class="slide_item_2 item">
+                    <strong>Impact Choco</strong>
+                </div>
+                <div class="slide_button">
+                    <button type="button" class="active item_1">
+                        <span class="blind">1번페이지</span>
+                    </button>
+                    <button type="button" class="item_2">
+                        <span class="blind">2번페이지</span>
+                    </button>
+                </div>
+            </article>
 
-        <article class="slide_container first">
-            <div class="slide_item_1 item">
-                <p>People who donated with Kakao</p>
-                <p class="counting">
-                    <span class="num1">0</span>,<span class="num2">0</span>,<span class="num3">0</span>
-                </p>
-                <p>case</p>
-            </div>
-            <div class="slide_item_2 item">
-                <strong>Impact Choco</strong>
-            </div>
-            <div class="slide_button">
-                <button type="button" class="active item_1">
-                    <span class="blind">1번페이지</span>
-                </button>
-                <button type="button" class="item_2">
-                    <span class="blind">2번페이지</span>
-                </button>
-            </div>
-        </article>
+            <article class="slide_container second">
+                <div class="slide_item_1 item">
+                    <strong>Safety</strong>
+                    <p>How to</p>
+                    <p>avoid scams</p>
+                    <em>&#35;Digital literacy</em>
+                </div>
+                <div class="slide_item_2 item">
+                    <strong>diversity</strong>
+                </div>
+                <div class="slide_item_3 item">
+                    <p>strong</p>
+                </div>
+                <div class="slide_button">
+                    <button type="button" class="active item_1">
+                        <span class="blind">1번페이지</span>
+                    </button>
+                    <button type="button" class="item_2">
+                        <span class="blind">2번페이지</span>
+                    </button>
+                    <button type="button" class="item_3">
+                        <span class="blind">3번페이지</span>
+                    </button>
+                </div>
+            </article>
 
-        <article class="slide_container second">
-            <div class="slide_item_1 item">
-                <strong>Safety</strong>
-                <p>How to</p>
-                <p>avoid scams</p>
-                <em>&#35;Digital literacy</em>
-            </div>
-            <div class="slide_item_2 item">
-                <strong>diversity</strong>
-            </div>
-            <div class="slide_item_3 item">
-                <p>strong</p>
-            </div>
-            <div class="slide_button">
-                <button type="button" class="active item_1">
-                    <span class="blind">1번페이지</span>
-                </button>
-                <button type="button" class="item_2">
-                    <span class="blind">2번페이지</span>
-                </button>
-                <button type="button" class="item_3">
-                    <span class="blind">3번페이지</span>
-                </button>
-            </div>
-        </article>
+            <article class="slide_container third">
+                <div class="slide_item_1 item">
+                    <img src="./images/photo/photo_1.jpg" alt="photo">
+                </div>
+                <div class="slide_item_2 item">
+                    <img src="./images/photo/photo_2.jpg" alt="photo">
+                </div>
+            </article>
 
-        <article class="slide_container third">
-            <div class="slide_item_1 item">
-                <img src="./images/photo/photo_1.jpg" alt="photo">
-            </div>
-        </article>
+        </section>
 
-    </section>
+        <div hx-get="./layouts/cards.html" hx-swap="outerHTML" hx-trigger="load">
+        </div>
+
+        <div hx-get="./layouts/footer.html" hx-swap="outerHTML" hx-trigger="load">
+        </div>
 
 
-    <div hx-get="./layouts/footer.html" hx-swap="outerHTML" hx-trigger="load">
-    </div>
-
-    <script src="./js/slide.js"></script>
-    <script src="./js/common.js"></script>
+        <script src="./js/slide.js"></script>
+        <script src="./js/common.js"></script>
 </body>
 
 </html>
