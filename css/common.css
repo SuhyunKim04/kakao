@@ -860,16 +860,13 @@ body.darkmode {
 }
 .cards .cards_box {
   height: 440px;
-  width: 317px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 20px;
 }
 .cards .cards_box .cards_item {
   background-color: bisque;
   border-radius: 20px;
-  height: 440px;
-  width: 317px;
+  flex: 0 0 320px;
 }
 
 html,
