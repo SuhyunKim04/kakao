@@ -748,6 +748,11 @@ body.darkmode {
   background-color: #fff;
   position: absolute;
   bottom: 0;
+  padding: 23px 23px 28px;
+}
+.main .main_video .video_left strong {
+  font-size: 22px;
+  font-weight: 400;
 }
 .main .main_video .video_left .arrow {
   display: flex;
@@ -835,7 +840,15 @@ body.darkmode {
   background-color: #fae100;
 }
 .main .first .slide_item_2 {
+  font-size: 40px;
   background-color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .first .slide_item_2 span {
+  color: #fae100;
+  font-weight: 400;
 }
 
 @media all and (max-width: 1440px) {
@@ -855,8 +868,11 @@ body.darkmode {
     grid-template-columns: auto 180px;
   }
 }
+.cards {
+  margin-top: 120px;
+}
 .cards h2 {
-  font-size: 30px;
+  font-size: 48px;
 }
 .cards .cards_box {
   height: 440px;

@@ -54,6 +54,11 @@ body.darkmode {
       background-color: #fff;
       position: absolute;
       bottom: 0;
+      padding: 23px 23px 28px;
+      strong {
+        font-size: 22px;
+        font-weight: 400;
+      }
       .arrow {
         @include flex($j: center, $a: center, $d: column);
         background-color: #000;
@@ -134,7 +139,13 @@ body.darkmode {
       background-color: #fae100;
     }
     .slide_item_2 {
+      font-size: 40px;
       background-color: #666;
+      @include flex($j: center);
+      span {
+        color: #fae100;
+        font-weight: 400;
+      }
     }
   }
 }
