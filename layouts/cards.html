@@ -13,18 +13,84 @@
 </head>
 
 <body>
-    <section class="cards">
-        <h2>Choco & Group Chronicles</h2>
-        <div class="cards_container">
-            <ul class="cards_box">
-                <li class="cards_item">A</li>
-                <li class="cards_item">B</li>
-                <li class="cards_item">C</li>
-                <li class="cards_item">D</li>
-                <li class="cards_item">E</li>
-                <li class="cards_item">F</li>
-            </ul>
-    </section>
+    <div class="card_section">
+        <section class="cards">
+            <div class="cards_title">
+                <h2>Choco & Group Chronicles</h2>
+                <button type="button" class="pause">
+                    <img src="../images/icons/pause.svg" alt="puase">
+                </button>
+            </div>
+
+            <div class="cards_container">
+                <ul class="cards_box">
+                    <li class="cards_item type_row">
+                        <div class="inner">
+                            <span class="info">
+                                <div>
+                                    <i class="fa-solid fa-paw"></i>
+                                    <em>History</em>
+                                </div>
+                                <img src="../images/icons/vertical_menu.svg" alt="vertical_menu">
+                            </span>
+                        </div>
+                    </li>
+                    <li class="cards_item">B</li>
+                    <li class="cards_item">C</li>
+                    <li class="cards_item">D</li>
+                    <li class="cards_item">E</li>
+                    <li class="cards_item">F</li>
+                    <li class="cards_item">F</li>
+                    <li class="cards_item">F</li>
+                    <li class="cards_item">F</li>
+                </ul>
+        </section>
+    </div>
+
+    <script>
+        const moving_cards = () => {
+            const pause_btn = document.querySelector(".pause");
+            const img = pause_btn.children[0]
+            const ul = document.querySelector(".cards_box");
+            let isRunning = true;
+
+            pause_btn.addEventListener("click", () => {
+
+                ul.style.animationPlayState = isRunning ? "paused" : "running";
+
+                let imgInfo = isRunning
+                    ?
+                    {
+                        src: "../images/icons/play.svg",
+                        alt: 'play'
+                    }
+
+                    :
+                    {
+                        src: "../images/icons/pause.svg",
+                        alt: 'pause'
+                    }
+
+                // 러닝상태일때에는 이미지의 경로를 일시정지로 바꾸고, 알트값도 바꾼다.
+                // 일시정지상태일때에는 이미지의 경로와 알트값을 반대로 바꾼다. 
+
+
+
+                for (let key in imgInfo) {
+                    img.setAttribute(key, imgInfo[key])
+                }
+
+
+
+
+
+                isRunning = !isRunning;
+            });
+        };
+
+
+        moving_cards();
+    </script>
 </body>
 
 </html>

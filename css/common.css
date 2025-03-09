@@ -110,24 +110,24 @@ input:focus {
  console.log('') --> @debug
  console.error('') --> @error
  */
-.main, .page_footer, .footer_inner, .header_inner {
+.card_section, .main, .page_footer, .footer_inner, .header_inner {
   width: 100%;
   margin: 0 auto;
   max-width: 1440px;
 }
 
 @media all and (max-width: 1440px) {
-  .main, .page_footer, .footer_inner, .header_inner {
+  .card_section, .main, .page_footer, .footer_inner, .header_inner {
     max-width: 1024px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .main, .page_footer, .footer_inner, .header_inner {
+  .card_section, .main, .page_footer, .footer_inner, .header_inner {
     max-width: 768px;
   }
 }
 @media screen and (max-width: 768px) {
-  .main, .page_footer, .footer_inner, .header_inner {
+  .card_section, .main, .page_footer, .footer_inner, .header_inner {
     max-width: 384px;
   }
 }
@@ -226,6 +226,9 @@ input:focus {
 }
 .darkmode .page_header .header_icons .icon_search {
   background-image: url("../images/icons/search_wt.svg");
+}
+.darkmode .theme_btn {
+  background-image: url("../images/icons/sun.svg");
 }
 
 .page_header {
@@ -871,20 +874,57 @@ body.darkmode {
 .cards {
   margin-top: 120px;
 }
-.cards h2 {
+.cards .cards_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards .cards_title h2 {
   font-size: 48px;
+}
+.cards .cards_title .pause {
+  width: 20px;
 }
 .cards .cards_box {
   height: 440px;
   display: flex;
   gap: 20px;
+  animation: slide 10s linear infinite both;
+}
+.cards .cards_box:hover {
+  animation-play-state: paused;
+}
+.cards .cards_box .type_row {
+  width: 772px;
 }
 .cards .cards_box .cards_item {
-  background-color: bisque;
+  background-color: #f3f3f3;
   border-radius: 20px;
   flex: 0 0 320px;
 }
+.cards .cards_box .cards_item .inner {
+  padding: 30px 30px 0;
+}
+.cards .cards_box .cards_item .info {
+  display: flex;
+  justify-content: space-between;
+}
+.cards .cards_box .cards_item .info em {
+  padding-left: 12px;
+}
+.cards .cards_box .cards_item .info img {
+  width: 24px;
+  height: 24px;
+}
 
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1000px);
+  }
+}
 html,
 body {
   width: 100%;

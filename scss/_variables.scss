@@ -1,3 +1,7 @@
+$url: "../images/";
+$icon: $url + "icons/";
+$photo: $url + "photo";
+
 $breakpoints: (
   // widePc: 1920px,
   pc: 1440px,
@@ -16,8 +20,6 @@ $theme: (
 );
 
 $color1: #fff;
-
-$icon: "../images/icons/";
 
 //colors
 $yellow: #fae100;

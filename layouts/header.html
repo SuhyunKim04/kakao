@@ -179,4 +179,14 @@
 
 <script>
     header_main_btn();
+
+    const change_mode = () => {
+        const btn = document.querySelector('.theme_btn');
+
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('darkmode')
+        })
+    }
+
+    change_mode();
 </script>

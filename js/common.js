@@ -52,52 +52,6 @@ const footer_menu = () => {
   }
 };
 
-// const footer_menu4 = () => {
-//     const footer_titles = document.querySelectorAll(".fnb > li");
-//     let curEl;
-//     footer_titles.forEach((title, idx) => {
-//       title.addEventListener("click", (e) => {
-//         e.preventDefault();
-//         console.log('clicked')
-//         reset_menu(title)
-//         let hasActive = title.classList.contains('active');
-//         console.log('before toggle', hasActive)
-//         title.classList.toggle('active')
-//         console.log('after toggle', hasActive)
-//       });
-//     });
-
-//     function reset_menu(activeMenu) {
-//       footer_titles.forEach(menu => {
-//           // 클릭된 메뉴와 동일하지 않은 경우에만 'on' 제거
-//           if (menu !== activeMenu) {
-//               menu.classList.remove('active');
-//           }
-//       });
-//       }
-
-//   };
-
-// const footer_menu = () => {
-//   const footer_titles = document.querySelectorAll(".footer_title");
-
-//   footer_titles.forEach((title) => {
-//     title.addEventListener("click", (e) => {
-//       e.preventDefault();
-//       reset_menu(title);
-//       title.closest("li").classList.toggle("active");
-//     });
-//   });
-
-//   function reset_menu(activeTitle) {
-//     footer_titles.forEach((title) => {
-//       if (title !== activeTitle) {
-//         title.closest("li").classList.remove("active");
-//       }
-//     });
-//   }
-// };
-
 const dimm_wt_open = () => {
   const dimm_wt = document.querySelector(".dimm_wt");
   dimm_wt.classList.add("open");
@@ -220,9 +174,7 @@ const topbtn_control = () => {
 
 document.body.addEventListener("htmx:afterSwap", () => {
   footer_menu();
-
   // theme();
-
   open_tablet();
   number();
   // family_footer();

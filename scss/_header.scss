@@ -9,9 +9,12 @@
 
     .header_icons {
       .icon_search {
-        background-image: url("../images/icons/search_wt.svg");
+        background-image: url($icon + "search_wt.svg");
       }
     }
+  }
+  .theme_btn {
+    background-image: url($icon + "sun.svg");
   }
 }
 
