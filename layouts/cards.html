@@ -22,17 +22,51 @@
                 </button>
             </div>
 
+            <article>
+                <div>
+                    <h3></h3>
+                </div>
+                <div>gallery</div>
+            </article>
+
             <div class="cards_container">
                 <ul class="cards_box">
                     <li class="cards_item type_row">
                         <div class="inner">
-                            <span class="info">
+                            <div class="info">
                                 <div>
                                     <i class="fa-solid fa-paw"></i>
-                                    <em>History</em>
+                                    <span class="card_sub">History</span>
                                 </div>
-                                <img src="../images/icons/vertical_menu.svg" alt="vertical_menu">
-                            </span>
+                                <button type="button" class="kebab">
+                                    <img src="../images/icons/vertical_menu.svg" alt="open menu">
+                                </button>
+                            </div>
+                            <a href="#">
+                                <strong>Kakao Talk Wallet,the starting point of a wallet-less future</strong>
+
+                                <div></div>
+                            </a>
+                        </div>
+                        <div class="card_modal">
+                            <button type="button" class="icon_close">
+                                <span class="blind">close menu</span>
+                            </button>
+                            <ul class="modal_icons">
+                                <li>
+                                    <button class="icon_kakaotalk"><span class="blind">kakaotalk</span></button>
+                                </li>
+                                <li>
+                                    <button class="icon_facebook">
+                                        <span class="blind">facebook</span></button>
+                                </li>
+                                <li>
+                                    <button class="icon_twitter"><span class="blind">twitter</span></button>
+                                </li>
+                                <li>
+                                    <button class="icon_link"><span class="blind">link</span></button>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li class="cards_item">B</li>
@@ -44,6 +78,7 @@
                     <li class="cards_item">F</li>
                     <li class="cards_item">F</li>
                 </ul>
+            </div>
         </section>
     </div>
 
@@ -79,17 +114,28 @@
                 for (let key in imgInfo) {
                     img.setAttribute(key, imgInfo[key])
                 }
-
-
-
-
-
                 isRunning = !isRunning;
             });
         };
 
+        const open_menu = () => {
+            const kebab = document.querySelectorAll(".kebab")
+            const close = document.querySelectorAll('.icon_close')
+            kebab.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    btn.closest("li").classList.add('active');
+                })
+            });
+
+            close.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    btn.closest("li").classList.remove('active');
+                })
+            })
+        }
 
         moving_cards();
+        open_menu();
     </script>
 </body>
 

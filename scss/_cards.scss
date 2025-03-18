@@ -22,7 +22,7 @@
     height: 440px;
     display: flex;
     gap: 20px;
-    animation: slide 10s linear infinite both;
+    // animation: slide 10s linear infinite both;
 
     &:hover {
       animation-play-state: paused;
@@ -34,21 +34,96 @@
     .cards_item {
       background-color: #f3f3f3;
       border-radius: 20px;
+      position: relative;
       flex: 0 0 320px;
       .inner {
-        padding: 30px 30px 0;
+        padding: 24px 24px 0;
       }
 
       .info {
         display: flex;
         justify-content: space-between;
-        em {
-          padding-left: 12px;
+        .card_sub {
+          margin-left: 12px;
+          background-color: #fff;
+          padding: 4px 12px;
+          border-radius: 8px;
         }
-        img {
+        .kebab {
+          outline: 1px solid red;
           width: 24px;
           height: 24px;
+
+          img {
+            height: 100%;
+          }
         }
+      }
+
+      &.active {
+        .card_modal {
+          display: flex;
+
+          li {
+            animation: returnMyPosition 0.5s both;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes returnMyPosition {
+  to {
+    translate: 0 0;
+  }
+}
+
+.card_modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 30;
+  opacity: 1;
+  border-radius: 20px;
+  padding: 16px 12px 0 0;
+  @include flex($d: column, $j: flex-start, $a: flex-end, $g: 6px);
+  display: none;
+
+  .icon_close {
+    color: #fff;
+    width: 36px;
+    height: 36px;
+  }
+
+  .modal_icons {
+    position: relative;
+    li {
+      margin-top: 12px;
+      &:nth-child(2) {
+        translate: 0 -48px;
+      }
+      &:nth-child(3) {
+        translate: 0 -96px;
+      }
+      &:nth-child(4) {
+        translate: 0 -144px;
+      }
+    }
+    button {
+      @include circle($size: 36);
+
+      &::before {
+        font-size: 14px;
+      }
+    }
+
+    .icon_link {
+      &::before {
+        font-size: 12px;
       }
     }
   }

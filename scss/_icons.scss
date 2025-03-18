@@ -11,11 +11,22 @@ $close: (
   close: "\f00d",
 );
 
+$modal_icons: (
+  facebook: "\f39e",
+  kakaotalk: "\f27a",
+  twitter: "\f099",
+  link: "\f0c1",
+);
+
 $main: (
   bulb: "\f0eb",
   arrow_right: "\f061",
   earth: "\f0ac",
 );
+
+// $footer:(
+//   arrow: "\"
+// )
 
 @mixin fontIcon(
   $code: null,
@@ -70,6 +81,21 @@ $main: (
 
 .icon_close {
   @include fontIcon(map-get($close, close));
+}
+
+.icon_kakaotalk {
+  @include fontIcon(map-get($modal_icons, kakaotalk));
+}
+.icon_facebook {
+  @include fontIcon(map-get($modal_icons, facebook), $family: "Brands");
+}
+
+.icon_twitter {
+  @include fontIcon(map-get($modal_icons, twitter), $family: "Brands");
+}
+
+.icon_link {
+  @include fontIcon(map-get($modal_icons, link));
 }
 
 .narrow {

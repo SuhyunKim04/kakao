@@ -15,6 +15,20 @@
     display: flex;
     .footer_menu {
       flex-basis: 50%;
+
+      li {
+        a {
+          position: relative;
+
+          &::after {
+            content: "↗︎";
+            position: absolute;
+            top: 4px;
+            height: 12px;
+            overflow: hidden;
+          }
+        }
+      }
     }
   }
 

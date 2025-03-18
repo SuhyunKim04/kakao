@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
 body, div, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ol, ul, li, fieldset, button, select, textarea, figure, figcaption, input, header, footer, nav, section, article, aside {
   margin: 0;
@@ -195,6 +196,62 @@ input:focus {
 }
 .icon_close::before {
   content: "\f00d";
+  font-family: "Font Awesome 6 Free";
+  font-size: 24px;
+  font-weight: 900;
+  color: inherit !important;
+}
+
+.icon_kakaotalk {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.icon_kakaotalk::before {
+  content: "\f27a";
+  font-family: "Font Awesome 6 Free";
+  font-size: 24px;
+  font-weight: 900;
+  color: inherit !important;
+}
+
+.icon_facebook {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.icon_facebook::before {
+  content: "\f39e";
+  font-family: "Font Awesome 6 Brands";
+  font-size: 24px;
+  font-weight: 900;
+  color: inherit !important;
+}
+
+.icon_twitter {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.icon_twitter::before {
+  content: "\f099";
+  font-family: "Font Awesome 6 Brands";
+  font-size: 24px;
+  font-weight: 900;
+  color: inherit !important;
+}
+
+.icon_link {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+}
+.icon_link::before {
+  content: "\f0c1";
   font-family: "Font Awesome 6 Free";
   font-size: 24px;
   font-weight: 900;
@@ -533,6 +590,16 @@ input:focus {
 }
 .page_footer .footer_group_box .footer_menu {
   flex-basis: 50%;
+}
+.page_footer .footer_group_box .footer_menu li a {
+  position: relative;
+}
+.page_footer .footer_group_box .footer_menu li a::after {
+  content: "↗︎";
+  position: absolute;
+  top: 4px;
+  height: 12px;
+  overflow: hidden;
 }
 .page_footer .fnb {
   width: 100%;
@@ -889,7 +956,6 @@ body.darkmode {
   height: 440px;
   display: flex;
   gap: 20px;
-  animation: slide 10s linear infinite both;
 }
 .cards .cards_box:hover {
   animation-play-state: paused;
@@ -900,21 +966,91 @@ body.darkmode {
 .cards .cards_box .cards_item {
   background-color: #f3f3f3;
   border-radius: 20px;
+  position: relative;
   flex: 0 0 320px;
 }
 .cards .cards_box .cards_item .inner {
-  padding: 30px 30px 0;
+  padding: 24px 24px 0;
 }
 .cards .cards_box .cards_item .info {
   display: flex;
   justify-content: space-between;
 }
-.cards .cards_box .cards_item .info em {
-  padding-left: 12px;
+.cards .cards_box .cards_item .info .card_sub {
+  margin-left: 12px;
+  background-color: #fff;
+  padding: 4px 12px;
+  border-radius: 8px;
 }
-.cards .cards_box .cards_item .info img {
+.cards .cards_box .cards_item .info .kebab {
+  outline: 1px solid red;
   width: 24px;
   height: 24px;
+}
+.cards .cards_box .cards_item .info .kebab img {
+  height: 100%;
+}
+.cards .cards_box .cards_item.active .card_modal {
+  display: flex;
+}
+.cards .cards_box .cards_item.active .card_modal li {
+  animation: returnMyPosition 0.5s both;
+}
+
+@keyframes returnMyPosition {
+  to {
+    translate: 0 0;
+  }
+}
+.card_modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 30;
+  opacity: 1;
+  border-radius: 20px;
+  padding: 16px 12px 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 6px;
+  display: none;
+}
+.card_modal .icon_close {
+  color: #fff;
+  width: 36px;
+  height: 36px;
+}
+.card_modal .modal_icons {
+  position: relative;
+}
+.card_modal .modal_icons li {
+  margin-top: 12px;
+}
+.card_modal .modal_icons li:nth-child(2) {
+  translate: 0 -48px;
+}
+.card_modal .modal_icons li:nth-child(3) {
+  translate: 0 -96px;
+}
+.card_modal .modal_icons li:nth-child(4) {
+  translate: 0 -144px;
+}
+.card_modal .modal_icons button {
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.card_modal .modal_icons button::before {
+  font-size: 14px;
+}
+.card_modal .modal_icons .icon_link::before {
+  font-size: 12px;
 }
 
 @keyframes slide {
