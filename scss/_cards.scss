@@ -65,7 +65,7 @@
           display: flex;
 
           li {
-            animation: returnMyPosition 0.5s both;
+            // animation: returnMyPosition 0.5s both;
           }
         }
       }
@@ -103,15 +103,18 @@
     position: relative;
     li {
       margin-top: 12px;
-      &:nth-child(2) {
-        translate: 0 -48px;
-      }
-      &:nth-child(3) {
-        translate: 0 -96px;
-      }
-      &:nth-child(4) {
-        translate: 0 -144px;
-      }
+      position: absolute;
+      right: 0;
+      top: 0;
+      // &:nth-child(2) {
+      //   translate: 0 -48px;
+      // }
+      // &:nth-child(3) {
+      //   translate: 0 -96px;
+      // }
+      // &:nth-child(4) {
+      //   translate: 0 -144px;
+      // }
     }
     button {
       @include circle($size: 36);
