@@ -79,16 +79,23 @@ body.darkmode {
     .slide_item_1 {
       background-color: #f7f7f7;
       text-align: center;
-      @include flex($d: column, $j: center);
+      @include flex($d: column, $j: center, $a: flex-start);
       @include posFull;
+      padding: 10px;
       strong {
         display: inline-block;
         @include position($p: absolute, $t: 14px, $l: 14px);
         font-weight: 300;
+        background-color: #fae100;
+        border-radius: 6px;
+        padding: 4px 10px;
       }
       .counting {
         font-weight: 600;
         font-size: 36px;
+      }
+      em {
+        margin-top: 4px;
       }
     }
 
@@ -162,11 +169,23 @@ body.darkmode {
         }
       }
     }
+
+    .first {
+      .slide_item_2 {
+        font-size: 35px;
+      }
+    }
   }
 }
 
 @include media(tablet) {
   .main {
     grid-template-columns: auto 180px;
+
+    .first {
+      .slide_item_2 {
+        font-size: 30px;
+      }
+    }
   }
 }

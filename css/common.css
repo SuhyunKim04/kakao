@@ -847,20 +847,27 @@ body.darkmode {
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   position: absolute;
   inset: 0 0 0 0;
+  padding: 10px;
 }
 .main .slide_container .slide_item_1 strong {
   display: inline-block;
   position: absolute;
   inset: 14px auto auto 14px;
   font-weight: 300;
+  background-color: #fae100;
+  border-radius: 6px;
+  padding: 4px 10px;
 }
 .main .slide_container .slide_item_1 .counting {
   font-weight: 600;
   font-size: 36px;
+}
+.main .slide_container .slide_item_1 em {
+  margin-top: 4px;
 }
 .main .slide_container .slide_item_2 {
   display: none;
@@ -932,10 +939,16 @@ body.darkmode {
   .main .slide_container .slide_item_1 .counting {
     font-size: 18px;
   }
+  .main .first .slide_item_2 {
+    font-size: 35px;
+  }
 }
 @media all and (max-width: 1024px) {
   .main {
     grid-template-columns: auto 180px;
+  }
+  .main .first .slide_item_2 {
+    font-size: 30px;
   }
 }
 .cards {
