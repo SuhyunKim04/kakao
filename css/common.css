@@ -847,28 +847,41 @@ body.darkmode {
   text-align: center;
   display: flex;
   justify-content: center;
+<<<<<<< Updated upstream
   align-items: flex-start;
   flex-direction: column;
   position: absolute;
   inset: 0 0 0 0;
   padding: 10px;
+=======
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  inset: 0 0 0 0;
+>>>>>>> Stashed changes
 }
 .main .slide_container .slide_item_1 strong {
   display: inline-block;
   position: absolute;
   inset: 14px auto auto 14px;
   font-weight: 300;
+<<<<<<< Updated upstream
   background-color: #fae100;
   border-radius: 6px;
   padding: 4px 10px;
+=======
+>>>>>>> Stashed changes
 }
 .main .slide_container .slide_item_1 .counting {
   font-weight: 600;
   font-size: 36px;
 }
+<<<<<<< Updated upstream
 .main .slide_container .slide_item_1 em {
   margin-top: 4px;
 }
+=======
+>>>>>>> Stashed changes
 .main .slide_container .slide_item_2 {
   display: none;
   position: absolute;
@@ -939,17 +952,23 @@ body.darkmode {
   .main .slide_container .slide_item_1 .counting {
     font-size: 18px;
   }
+<<<<<<< Updated upstream
   .main .first .slide_item_2 {
     font-size: 35px;
   }
+=======
+>>>>>>> Stashed changes
 }
 @media all and (max-width: 1024px) {
   .main {
     grid-template-columns: auto 180px;
   }
+<<<<<<< Updated upstream
   .main .first .slide_item_2 {
     font-size: 30px;
   }
+=======
+>>>>>>> Stashed changes
 }
 .cards {
   margin-top: 120px;
@@ -1003,12 +1022,15 @@ body.darkmode {
 .cards .cards_box .cards_item .info .kebab img {
   height: 100%;
 }
+<<<<<<< Updated upstream
 .cards .cards_box .cards_item.active .card_modal {
   display: flex;
 }
 .cards .cards_box .cards_item.active .card_modal li {
   animation: returnMyPosition 0.5s both;
 }
+=======
+>>>>>>> Stashed changes
 
 @keyframes returnMyPosition {
   to {
@@ -1023,7 +1045,10 @@ body.darkmode {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.55);
   z-index: 30;
+<<<<<<< Updated upstream
   opacity: 1;
+=======
+>>>>>>> Stashed changes
   border-radius: 20px;
   padding: 16px 12px 0 0;
   display: flex;
@@ -1032,6 +1057,17 @@ body.darkmode {
   flex-direction: column;
   gap: 6px;
   display: none;
+<<<<<<< Updated upstream
+=======
+  opacity: 0;
+  transition: 1s;
+}
+.card_modal.active {
+  display: flex;
+}
+.card_modal .modal_icons.show li {
+  translate: 0 0 !important;
+>>>>>>> Stashed changes
 }
 .card_modal .icon_close {
   color: #fff;
@@ -1043,6 +1079,7 @@ body.darkmode {
 }
 .card_modal .modal_icons li {
   margin-top: 12px;
+<<<<<<< Updated upstream
 }
 .card_modal .modal_icons li:nth-child(2) {
   translate: 0 -48px;
@@ -1052,6 +1089,18 @@ body.darkmode {
 }
 .card_modal .modal_icons li:nth-child(4) {
   translate: 0 -144px;
+=======
+  transition: 0.4s;
+}
+.card_modal .modal_icons li:nth-child(2) {
+  translate: 0 -50px;
+}
+.card_modal .modal_icons li:nth-child(3) {
+  translate: 0 -100px;
+}
+.card_modal .modal_icons li:nth-child(4) {
+  translate: 0 -150px;
+>>>>>>> Stashed changes
 }
 .card_modal .modal_icons button {
   width: 36px;
