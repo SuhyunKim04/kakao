@@ -83,6 +83,10 @@ const open_tablet = () => {
   const ham_icon = document.querySelector(".icon_ham");
   const tablet_menu = document.querySelector(".nav_wrap");
   const close_menu = document.getElementById("close_menu");
+
+  if (!ham_icon) {
+    return;
+  }
   ham_icon.addEventListener("click", () => {
     tablet_menu.classList.add("open");
   });

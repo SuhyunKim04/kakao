@@ -22,7 +22,7 @@
     height: 440px;
     display: flex;
     gap: 20px;
-    // animation: slide 10s linear infinite both;
+    animation: slide 30s linear infinite both;
 
     &:hover {
       animation-play-state: paused;
@@ -59,16 +59,6 @@
           }
         }
       }
-
-      &.active {
-        .card_modal {
-          display: flex;
-
-          li {
-            animation: returnMyPosition 0.5s both;
-          }
-        }
-      }
     }
   }
 }
@@ -87,11 +77,22 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.55);
   z-index: 30;
-  opacity: 1;
   border-radius: 20px;
   padding: 16px 12px 0 0;
   @include flex($d: column, $j: flex-start, $a: flex-end, $g: 6px);
   display: none;
+  opacity: 0;
+  transition: 1s;
+
+  &.active {
+    display: flex;
+  }
+
+  .modal_icons.show {
+    li {
+      translate: 0 0 !important;
+    }
+  }
 
   .icon_close {
     color: #fff;
@@ -103,14 +104,18 @@
     position: relative;
     li {
       margin-top: 12px;
+      transition: 0.4s;
+
+      $size: -50px;
+
       &:nth-child(2) {
-        translate: 0 -48px;
+        translate: 0 #{$size};
       }
       &:nth-child(3) {
-        translate: 0 -96px;
+        translate: 0 #{$size * 2};
       }
       &:nth-child(4) {
-        translate: 0 -144px;
+        translate: 0 #{$size * 3};
       }
     }
     button {

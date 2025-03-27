@@ -22,13 +22,6 @@
                 </button>
             </div>
 
-            <article>
-                <div>
-                    <h3></h3>
-                </div>
-                <div>gallery</div>
-            </article>
-
             <div class="cards_container">
                 <ul class="cards_box">
                     <li class="cards_item type_row">
@@ -69,7 +62,44 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="cards_item">B</li>
+                    <li class="cards_item type_row">
+                        <div class="inner">
+                            <div class="info">
+                                <div>
+                                    <i class="fa-solid fa-paw"></i>
+                                    <span class="card_sub">History</span>
+                                </div>
+                                <button type="button" class="kebab">
+                                    <img src="../images/icons/vertical_menu.svg" alt="open menu">
+                                </button>
+                            </div>
+                            <a href="#">
+                                <strong>Kakao Talk Wallet,the starting point of a wallet-less future</strong>
+
+                                <div></div>
+                            </a>
+                        </div>
+                        <div class="card_modal">
+                            <button type="button" class="icon_close">
+                                <span class="blind">close menu</span>
+                            </button>
+                            <ul class="modal_icons">
+                                <li>
+                                    <button class="icon_kakaotalk"><span class="blind">kakaotalk</span></button>
+                                </li>
+                                <li>
+                                    <button class="icon_facebook">
+                                        <span class="blind">facebook</span></button>
+                                </li>
+                                <li>
+                                    <button class="icon_twitter"><span class="blind">twitter</span></button>
+                                </li>
+                                <li>
+                                    <button class="icon_link"><span class="blind">link</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                     <li class="cards_item">C</li>
                     <li class="cards_item">D</li>
                     <li class="cards_item">E</li>
@@ -118,24 +148,48 @@
             });
         };
 
-        const open_menu = () => {
-            const kebab = document.querySelectorAll(".kebab")
-            const close = document.querySelectorAll('.icon_close')
-            kebab.forEach((btn) => {
-                btn.addEventListener('click', () => {
-                    btn.closest("li").classList.add('active');
-                })
-            });
 
-            close.forEach((btn) => {
-                btn.addEventListener('click', () => {
-                    btn.closest("li").classList.remove('active');
+        // 카드리스트의 Kebab_dialog 모달 
+
+        const kebab_toggle = (btn, show) => {
+            const modal = btn.closest('li').querySelector('.card_modal')
+            const icons = modal.querySelector('.modal_icons')
+            if (show) {
+                modal.classList.add('active');
+                icons.offsetHeight;
+                setTimeout(() => {
+                    modal.style.opacity = 1;
+                    icons.classList.add('show')
+                }, 0)
+            } else {
+                modal.style.opacity = 0;
+                icons.classList.remove('show')
+                setTimeout(() => {
+                    modal.classList.remove('active');
+                }, 200)
+            }
+        }
+
+        const kebab_modal = () => {
+            const kebabs = document.querySelectorAll(".kebab")
+            const closeBtns = document.querySelectorAll('.icon_close')
+
+            kebabs.forEach((kebab) => {
+                kebab.addEventListener('click', () => {
+                    kebab_toggle(kebab, true)
+                })
+            })
+
+            closeBtns.forEach((closeBtn) => {
+                closeBtn.addEventListener('click', () => {
+                    kebab_toggle(closeBtn, false)
                 })
             })
         }
 
+
         moving_cards();
-        open_menu();
+        kebab_modal();
     </script>
 </body>
 
